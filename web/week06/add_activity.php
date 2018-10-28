@@ -24,10 +24,10 @@ $id       = htmlspecialchars($_POST['id']);
 // $stmt = $db->prepare($query2);
 
 $stmt->bindValue(":name", $activity, PDO::PARAM_STR);
-// $stmt->bindValue(":day",      $date, PDO::PARAM_STR);
-// $stmt->bindValue(":place",    $place, PDO::PARAM_STR);
-// $stmt->bindValue(":duration", $duration, PDO::PARAM_INT);
-// $stmt->bindValue(":quality",  $quality, PDO::PARAM_INT);
+$stmt->bindValue(":day",      $date, PDO::PARAM_STR);
+$stmt->bindValue(":place",    $place, PDO::PARAM_STR);
+$stmt->bindValue(":duration", $duration, PDO::PARAM_INT);
+$stmt->bindValue(":quality",  $quality, PDO::PARAM_INT);
  $stmt->bindValue(":id", $id, PDO::PARAM_INT);
 //  echo "$id";
 
