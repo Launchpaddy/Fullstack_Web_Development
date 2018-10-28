@@ -15,13 +15,13 @@ $activity = htmlspecialchars($_POST['activity']);
 
  // $query = "INSERT INTO activities (name, day, place, hour_duration, inviroment_quality, sport_id) VALUES (:name, :day, :place, :duration, :quality, :id);";
 
- $query2 "INSERT INTO activities (name) VALUES (:name);"
+ $query2 = "INSERT INTO activities (name) VALUES (:name);"
 
 
 
 $stmt = $db->prepare($query2);
 
-$stmt->bindValue(":name",     $activity, PDO::PARAM_STR);
+$stmt->bindValue(":name", $activity, PDO::PARAM_STR);
 // $stmt->bindValue(":day",      $date, PDO::PARAM_STR);
 // $stmt->bindValue(":place",    $place, PDO::PARAM_STR);
 // $stmt->bindValue(":duration", $duration, PDO::PARAM_INT);
