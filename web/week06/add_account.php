@@ -14,7 +14,9 @@ $displayName = htmlspecialchars($_POST['displayName']);
 $_SESSION['displayName'] = $displayName;
 //$_SESSION['logedIn'] = true;
 
-$query = "INSERT INTO users(username, password, display_name) VALUES (:username, :password, :displayName);";
+$query = "
+INSERT INTO users(username, password, display_name)
+VALUES (:username, :password, :displayName);";
 
 
 
