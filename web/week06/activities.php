@@ -123,7 +123,7 @@ echo $sid;
     <input type="number" Placeholder="Inviroment Quality" name="quality" >
 
 
-    <input type="hidden" name="id" value="<?php echo $sid?>" >
+    <input type="hidden" name="id" value="<?php $sid?>" >
 
 
     <button type="submit">Add new Activity</button>
