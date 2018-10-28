@@ -31,6 +31,6 @@ $stmt->execute();
 //$newpage = "login.php";
 header('location:login.php');
 //header("location:$newpage");
-die();
+//die();
 
 ?>
