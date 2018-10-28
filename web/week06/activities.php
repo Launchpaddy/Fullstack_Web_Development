@@ -131,7 +131,10 @@ echo $sid;
   </div>
 
  </form>
- <?php echo $sid ?>
+ <?php
+ echo $sid
+   $_SESSION['sport_id'] = $sid;
+  ?>
 
 </body>
 </html>
