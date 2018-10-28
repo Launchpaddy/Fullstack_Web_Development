@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-require('dbConnect.php');
-$db = get_db();
+// require('dbConnect.php');
+// $db = get_db();
 
 $sport_id = $_SESSION['sport_id'];
 
