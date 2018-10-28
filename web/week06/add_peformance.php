@@ -27,10 +27,10 @@ $db = get_db();
 
 $stmt = $db->prepare($query);
 
-$stmt->bindValue(":name",     $name, PDO::PARAM_STR);
-$stmt->bindValue(":performance", $performance, PDO::PARAM_INT);
-$stmt->bindValue(":fun",    $fun,    PDO::PARAM_INT);
-$stmt->bindValue(":health", $health, PDO::PARAM_INT);
+$stmt->bindValue(":name",         $name, PDO::PARAM_STR);
+$stmt->bindValue(":performance",  $performance, PDO::PARAM_INT);
+$stmt->bindValue(":fun",          $fun,    PDO::PARAM_INT);
+$stmt->bindValue(":health",       $health, PDO::PARAM_INT);
 $stmt->bindValue(":activity_id",  $activity_id,  PDO::PARAM_INT);
 
 //  echo "$id";

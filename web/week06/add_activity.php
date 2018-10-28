@@ -58,7 +58,7 @@ $stmt->execute();
       ?>
 
    </h1>
-<form action="add_performance.php" method="POST">
+<form action="add_performance.php" method="GET">
     <div class="container">
 
 
