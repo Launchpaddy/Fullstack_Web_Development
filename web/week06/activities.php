@@ -114,18 +114,19 @@ echo $sid;
 
     <label for="activity"><b>Activity</b></label>
 
-    <input type="text" placeholder="Enter Activity" name="activity" required>
+   <input type="text"   placeholder="Enter Activity" name="activity" required>
 
-   <input type="date" placeholder="Enter Date" name="date" required>
-   <input type="text" Placeholder="Enter Location" name="place" required>
+   <input type="date"   placeholder="Enter Date" name="date" required>
 
-    <input type="number" Placeholder="Duration" name="duration" required>
+   <input type="text"   Placeholder="Enter Location" name="place" required>
 
-    <input type="number" Placeholder="Inviroment Quality" name="quality" required>
+   <input type="number" Placeholder="Duration" name="duration" required>
+
+   <input type="number" Placeholder="Inviroment Quality" name="quality" required>
 
 
-    <input type="hidden" name="sport_id" value="<?php echo $sid?>" >
-     <input type="hidden" name="activity_id" value="<?php echo $aid?>" >
+   <input type="hidden" name="sport_id" value="<?php echo $sid?>" >
+   <input type="hidden" name="activity_id" value="<?php echo $aid?>" >
 
 
     <button type="submit">Add new Activity</button>

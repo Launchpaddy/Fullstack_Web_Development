@@ -29,16 +29,3 @@ header('location:homepage.php');
 
 
 // ?>
-// <!DOCTYPE html>
-// <html>
-// <head>
-//    <title></title>
-// </head>
-// <body>
-//    <form action="homepage.php" method="POST">
-
-
-//    </form>
-
-// </body>
-// </html>
