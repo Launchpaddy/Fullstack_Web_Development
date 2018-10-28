@@ -62,6 +62,7 @@ session_start();
 <body>
 <?php
    // $id = $user['id'];
+echo $sid;
   //
    foreach ($sports as $sport) {
       $sname = $sport['name'];
