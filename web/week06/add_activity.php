@@ -6,12 +6,12 @@ $db = get_db();
 
 $sport_id = $_SESSION['sport_id'];
 
-$activity = htmlspecialchars($_POST['activity']);
-$date     = htmlspecialchars($_POST['date']);
-$place    = htmlspecialchars($_POST['place']);
-$duration = htmlspecialchars($_POST['duration']);
-$quality  = htmlspecialchars($_POST['quality']);
-$id       = htmlspecialchars($_POST['id']);
+// $activity = htmlspecialchars($_POST['activity']);
+// $date     = htmlspecialchars($_POST['date']);
+// $place    = htmlspecialchars($_POST['place']);
+// $duration = htmlspecialchars($_POST['duration']);
+// $quality  = htmlspecialchars($_POST['quality']);
+// $id       = htmlspecialchars($_POST['id']);
 
 
 
