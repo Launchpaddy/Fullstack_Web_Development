@@ -86,6 +86,7 @@ echo $sid;
       if ($sid == $sportid) {
          echo "<ul><li><p> Sport activity: $aname, Date: $aday, Place: $place,</p></li></ul>";
 
+
          foreach ($performance as $per) {
             $pname = $per['name'];
             $plevel = $per['performance_level'];
@@ -123,7 +124,8 @@ echo $sid;
     <input type="number" Placeholder="Inviroment Quality" name="quality" required>
 
 
-    <input type="hidden" name="id" value="<?php echo $sid?>" >
+    <input type="hidden" name="sport_id" value="<?php echo $sid?>" >
+     <input type="hidden" name="activity_id" value="<?php echo $aid?>" >
 
 
     <button type="submit">Add new Activity</button>

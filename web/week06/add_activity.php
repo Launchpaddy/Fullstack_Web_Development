@@ -12,7 +12,8 @@ $date     = htmlspecialchars($_GET['date']);
 $place    = htmlspecialchars($_GET['place']);
 $duration = htmlspecialchars($_GET['duration']);
 $quality  = htmlspecialchars($_GET['quality']);
-$id       = htmlspecialchars($_GET['id']);
+$sport_id = htmlspecialchars($_GET['sport_id']);
+$activity_id = htmlspecialchars($_GET['activity_id']);
 
 
 
@@ -31,7 +32,7 @@ $stmt->bindValue(":day",      $date,     PDO::PARAM_STR);
 $stmt->bindValue(":place",    $place,    PDO::PARAM_STR);
 $stmt->bindValue(":duration", $duration, PDO::PARAM_INT);
 $stmt->bindValue(":quality",  $quality,  PDO::PARAM_INT);
-$stmt->bindValue(":id",       $id,       PDO::PARAM_INT);
+$stmt->bindValue(":id",       $sport_id, PDO::PARAM_INT);
 //  echo "$id";
 
 
@@ -40,9 +41,8 @@ $stmt->execute();
 
 
 
-header("location:activities.php?sport_id=$id");
-//header("location:$newpage");
-die();
+// header("location:activities.php?sport_id=$id");
+// die();
 
 
 ?>
@@ -53,7 +53,30 @@ die();
    <title>testing</title>
 </head>
 <body>
-   <h1><?php echo $sport_id?></h1>
+   <h1>
+      <?php echo $activity
+      ?>
+
+   </h1>
+<form action="add_performance.php" method="POST">
+    <div class="container">
+
+
+    <input type="hidden" name="<?php echo $activity?>">
+
+   <input type="number" placeholder="Enter Performance Level" name="performance" required>
+   <input type="number" Placeholder="Enter Fun Level" name="fun" required>
+
+    <input type="number" Placeholder="Health Level" name="health" required>
+
+    <input type="hidden" name="activity_id" value="<?php echo $activity_id?>" >
+
+
+    <button type="submit">Add new Activity</button>
+
+  </div>
+
+ </form>
 
 </body>
 </html>
