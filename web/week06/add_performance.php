@@ -7,10 +7,10 @@ $db = get_db();
 
 
 
- $name = htmlspecialchars($_GET['name']);
- $performance     = htmlspecialchars($_GET['performance']);
- $fun    = htmlspecialchars($_GET['fun']);
- $health = htmlspecialchars($_GET['health']);
+ $name        = htmlspecialchars($_GET['name']);
+ $performance = htmlspecialchars($_GET['performance']);
+ $fun         = htmlspecialchars($_GET['fun']);
+ $health      = htmlspecialchars($_GET['health']);
  $activity_id = htmlspecialchars($_GET['activity_id']);
 
  $sport_id = htmlspecialchars($_GET['sport_id']);
@@ -18,7 +18,7 @@ $db = get_db();
 
 
  $query = "
- INSERT INTO performance (name, performance_level, fun_level, activitie_id)
+ INSERT INTO performance (name, performance_level, fun_level, health, activitie_id)
  VALUES (:name, :performance, :fun, :health, :activity_id);";
 
 //  $query2 = "INSERT INTO activities (name, sport_id) VALUES (:name, :id);"
