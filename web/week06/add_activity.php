@@ -50,7 +50,7 @@ $sport_id = $_SESSION['sport_id'];
    <title>testing</title>
 </head>
 <body>
-   <h1><?php $sport_id?></h1>
+   <h1><?php echo $sport_id?></h1>
 
 </body>
 </html>
