@@ -30,7 +30,7 @@ $stmt->bindValue(":name", $activity, PDO::PARAM_STR);
  echo "$id";
 
 
-$stmt->execute();
+//$stmt->execute();
 
 
 
@@ -41,3 +41,14 @@ header('location:activities.php');
 
 
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+   <title>testing</title>
+</head>
+<body>
+   <h1><?php $sid ?></h1>
+
+</body>
+</html>
