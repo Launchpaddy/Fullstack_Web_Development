@@ -1,0 +1,8 @@
+<!--
+   <ul>
+      <li><button onclick="<?php array_push($_SESSION['cart'],'fuji') ?>">fuji </button> </li>
+      <li><button onclick="<?php array_push($_SESSION['cart'],'perfect') ?>">perfect</button></li>
+      <li><button onclick="<?php array_push($_SESSION['cart'],'vitamin') ?>">vitamin</button></li>
+   </ul>
+
+   <p><?php echo "Number of Items in the cart = ".sizeof($_SESSION['cart'])." <a href=cart-remove-all.php>Remove all</a><br>"; ?></p> -->
