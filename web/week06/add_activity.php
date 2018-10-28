@@ -40,7 +40,7 @@ $stmt->execute();
 
 
 
-header('location:activities.php?sport_id='$id'');
+header("location:activities.php?sport_id=");
 //header("location:$newpage");
 die();
 
