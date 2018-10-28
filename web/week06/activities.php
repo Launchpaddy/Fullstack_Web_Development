@@ -131,10 +131,10 @@ echo $sid;
   </div>
 
  </form>
- <?php
+<!--  <php
  echo $sid
    $_SESSION['sport_id'] = $_GET['sport_id'];
-  ?>
+  ?> -->
 
 </body>
 </html>
