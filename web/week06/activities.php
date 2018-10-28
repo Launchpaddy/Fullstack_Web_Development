@@ -60,9 +60,9 @@ session_start();
    <title>Activities</title>
 </head>
 <body>
+
 <?php
    // $id = $user['id'];
-echo $sid;
   //
    foreach ($sports as $sport) {
       $sname = $sport['name'];
@@ -71,6 +71,8 @@ echo $sid;
         echo "<h1>$sname's Activities</h1>";
       }
    }
+
+   echo "<a href="homepage.php">Return to Home</a>";
 
 
 
@@ -84,7 +86,7 @@ echo $sid;
       $place = $activity['place'];
       // if the activiy is realated to the right sport for the user
       if ($sid == $sportid) {
-         echo "<ul><li><p> Sport activity: $aname, Date: $aday, Place: $place,</p></li></ul>";
+         echo "<ul><li><p> Sport activity: $aname, Date: $aday, Place: $place</p></li></ul>";
 
 
          foreach ($performance as $per) {
