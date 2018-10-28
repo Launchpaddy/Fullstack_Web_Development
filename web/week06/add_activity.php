@@ -62,7 +62,7 @@ $stmt->execute();
     <div class="container">
 
 
-    <input type="hidden" name="<?php echo $activity?>">
+    <input type="hidden" name="name" value"<?php echo $activity?>">
 
    <input type="number" placeholder="Enter Performance Level" name="performance" required>
    <input type="number" Placeholder="Enter Fun Level" name="fun" required>
@@ -70,6 +70,7 @@ $stmt->execute();
     <input type="number" Placeholder="Health Level" name="health" required>
 
     <input type="hidden" name="activity_id" value="<?php echo $activity_id?>" >
+    <input type="hidden" name="sport_id" value="<?php echo $sport_id?>" >
 
 
     <button type="submit">Add new Activity</button>
