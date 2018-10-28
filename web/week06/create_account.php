@@ -16,7 +16,7 @@
          <input type="password" placeholder="Enter Password" name="password" required>
 
          <label for="displayName"><b>Choose Display Name</b></label>
-         <input type="password" placeholder="Enter Display Name" name="displayName" required>
+         <input type="text" placeholder="Enter Display Name" name="displayName" required>
 
          <button type="submit">Create Account</button>
       </div>
