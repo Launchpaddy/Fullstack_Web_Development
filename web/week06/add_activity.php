@@ -50,7 +50,7 @@ $id       = htmlspecialchars($_POST['id']);
    <title>testing</title>
 </head>
 <body>
-   <h1><?php $id ?></h1>
+   <h1><?php $sport_id?></h1>
 
 </body>
 </html>
