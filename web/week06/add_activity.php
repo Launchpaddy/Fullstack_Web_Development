@@ -62,7 +62,7 @@ $stmt->execute();
     <div class="container">
 
 
-    <input type="hidden" name="name" value"<?php echo $activity?>">
+    <input type="hidden" name="name" value="<?php echo $activity?>">
 
    <input type="number" placeholder="Enter Performance Level" name="performance" required>
    <input type="number" Placeholder="Enter Fun Level" name="fun" required>
