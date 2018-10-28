@@ -21,7 +21,7 @@ $id       = htmlspecialchars($_POST['id']);
 
 
 
-// $stmt = $db->prepare($query2);
+$stmt = $db->prepare($query2);
 
 $stmt->bindValue(":name", $activity, PDO::PARAM_STR);
 $stmt->bindValue(":day",      $date, PDO::PARAM_STR);
