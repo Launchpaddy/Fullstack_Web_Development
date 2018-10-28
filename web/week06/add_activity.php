@@ -1,17 +1,18 @@
 <?php
+
 session_start();
 
 // require('dbConnect.php');
 // $db = get_db();
 
-$sport_id = $_SESSION['sport_id'];
+//$sport_id = $_SESSION['sport_id'];
 
-$activity = htmlspecialchars($_POST['activity']);
-$date     = htmlspecialchars($_POST['date']);
-$place    = htmlspecialchars($_POST['place']);
-$duration = htmlspecialchars($_POST['duration']);
-$quality  = htmlspecialchars($_POST['quality']);
-$id       = htmlspecialchars($_POST['id']);
+$activity = htmlspecialchars($_GET['activity']);
+$date     = htmlspecialchars($_GET['date']);
+$place    = htmlspecialchars($_GET['place']);
+$duration = htmlspecialchars($_GET['duration']);
+$quality  = htmlspecialchars($_GET['quality']);
+$id       = htmlspecialchars($_GET['id']);
 
 
 
