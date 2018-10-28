@@ -5,29 +5,29 @@ require('dbConnect.php');
 $db = get_db();
 
 $activity = htmlspecialchars($_POST['activity']);
-// $date     = htmlspecialchars($_POST['date']);
-// $place    = htmlspecialchars($_POST['place']);
-// $duration = htmlspecialchars($_POST['duration']);
-// $quality  = htmlspecialchars($_POST['quality']);
-// $id       = htmlspecialchars($_POST['id']);
+$date     = htmlspecialchars($_POST['date']);
+$place    = htmlspecialchars($_POST['place']);
+$duration = htmlspecialchars($_POST['duration']);
+$quality  = htmlspecialchars($_POST['quality']);
+$id       = htmlspecialchars($_POST['id']);
 
 
 
  // $query = "INSERT INTO activities (name, day, place, hour_duration, inviroment_quality, sport_id) VALUES (:name, :day, :place, :duration, :quality, :id);";
 
- $query2 = "INSERT INTO activities (name, sport_id) VALUES (:name, :id);"
+//  $query2 = "INSERT INTO activities (name, sport_id) VALUES (:name, :id);"
 
 
 
-$stmt = $db->prepare($query2);
+// $stmt = $db->prepare($query2);
 
-$stmt->bindValue(":name", $activity, PDO::PARAM_STR);
-// $stmt->bindValue(":day",      $date, PDO::PARAM_STR);
-// $stmt->bindValue(":place",    $place, PDO::PARAM_STR);
-// $stmt->bindValue(":duration", $duration, PDO::PARAM_INT);
-// $stmt->bindValue(":quality",  $quality, PDO::PARAM_INT);
- $stmt->bindValue(":id", $id, PDO::PARAM_INT);
- echo "$id";
+// $stmt->bindValue(":name", $activity, PDO::PARAM_STR);
+// // $stmt->bindValue(":day",      $date, PDO::PARAM_STR);
+// // $stmt->bindValue(":place",    $place, PDO::PARAM_STR);
+// // $stmt->bindValue(":duration", $duration, PDO::PARAM_INT);
+// // $stmt->bindValue(":quality",  $quality, PDO::PARAM_INT);
+//  $stmt->bindValue(":id", $id, PDO::PARAM_INT);
+//  echo "$id";
 
 
 //$stmt->execute();
@@ -35,7 +35,7 @@ $stmt->bindValue(":name", $activity, PDO::PARAM_STR);
 
 
 
-header('location:activities.php');
+//header('location:activities.php');
 //header("location:$newpage");
 // die();
 
@@ -48,7 +48,7 @@ header('location:activities.php');
    <title>testing</title>
 </head>
 <body>
-   <h1><?php $sid ?></h1>
+   <h1><?php $id ?></h1>
 
 </body>
 </html>
