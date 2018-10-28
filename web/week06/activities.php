@@ -122,7 +122,7 @@ session_start();
     <input type="number" Placeholder="Inviroment Quality" name="quality" >
 
 
-    <input type="hidden" name="id" value="<?php echo $sportid?>" >
+    <input type="hidden" name="id" value="<?php echo $sid?>" >
 
 
     <button type="submit">Add new Activity</button>

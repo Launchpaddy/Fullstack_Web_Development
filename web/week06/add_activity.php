@@ -15,7 +15,7 @@ $activity = htmlspecialchars($_POST['activity']);
 
  // $query = "INSERT INTO activities (name, day, place, hour_duration, inviroment_quality, sport_id) VALUES (:name, :day, :place, :duration, :quality, :id);";
 
- $query2 = "INSERT INTO activities (name) VALUES (:name);"
+ $query2 = "INSERT INTO activities (name, sport_id) VALUES (:name, :id);"
 
 
 
@@ -26,7 +26,7 @@ $stmt->bindValue(":name", $activity, PDO::PARAM_STR);
 // $stmt->bindValue(":place",    $place, PDO::PARAM_STR);
 // $stmt->bindValue(":duration", $duration, PDO::PARAM_INT);
 // $stmt->bindValue(":quality",  $quality, PDO::PARAM_INT);
-// $stmt->bindValue(":id",       $id, PDO::PARAM_INT);
+ $stmt->bindValue(":id", $id, PDO::PARAM_INT);
 
 
 $stmt->execute();
