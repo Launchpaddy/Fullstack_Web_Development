@@ -17,19 +17,7 @@ session_start();
    }
    else
    {
-      // $perfUser = $_POST['username'];
-      // $perfPass = $_POST['password'];
-      // $perfDName = $_POST['displayName'];
 
-      // $username = htmlspecialchars($_POST['username']);
-      // $_SESSION['username'] = $username;
-
-      // $password = htmlspecialchars($_POST['password']);
-      // $_SESSION['password'] = $password;
-
-      // $displayName = htmlspecialchars($_POST['displayName']);
-      // $_SESSION['displayName'] = $displayName;
-      // $_SESSION['logedIn'] = true;
    }
 
 
@@ -72,7 +60,7 @@ session_start();
       }
    }
 
-   echo "<a href=\"homepage.php\">Return to Home</a>";
+  // echo "<a href=\"homepage.php\">Return to Home</a>";
 
 
 
