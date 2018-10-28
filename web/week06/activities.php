@@ -133,7 +133,7 @@ echo $sid;
  </form>
  <?php
  echo $sid
-   $_SESSION['sport_id'] = $sid;
+   $_SESSION['sport_id'] = $_GET['sport_id'];
   ?>
 
 </body>
