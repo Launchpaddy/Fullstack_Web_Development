@@ -131,6 +131,7 @@ echo $sid;
   </div>
 
  </form>
+ <?php echo $sid ?>
 
 </body>
 </html>
