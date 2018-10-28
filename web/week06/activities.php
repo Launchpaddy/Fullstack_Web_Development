@@ -108,7 +108,7 @@ echo $sid;
 
 ?>
 
- <form action="add_activity.php" method="POST">
+ <form action="add_activity.php" method="GET">
     <div class="container">
 
     <label for="activity"><b>Activity</b></label>
