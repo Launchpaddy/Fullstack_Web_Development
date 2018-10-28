@@ -115,12 +115,12 @@ echo $sid;
 
     <input type="text" placeholder="Enter Activity" name="activity" required>
 
-   <input type="date" placeholder="Enter Date" name="date" >
-   <input type="text" Placeholder="Enter Location" name="place" >
+   <input type="date" placeholder="Enter Date" name="date" required>
+   <input type="text" Placeholder="Enter Location" name="place" required>
 
-    <input type="number" Placeholder="Duration" name="duration" >
+    <input type="number" Placeholder="Duration" name="duration" required>
 
-    <input type="number" Placeholder="Inviroment Quality" name="quality" >
+    <input type="number" Placeholder="Inviroment Quality" name="quality" required>
 
 
     <input type="hidden" name="id" value="<?php echo $sid?>" >
