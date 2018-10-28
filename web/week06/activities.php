@@ -60,7 +60,7 @@ session_start();
       }
    }
 
-  // echo "<a href=\"homepage.php\">Return to Home</a>";
+   echo "<a href='homepage.php'>Return to Home</a>";
 
 
 
