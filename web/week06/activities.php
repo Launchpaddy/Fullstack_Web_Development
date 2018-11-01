@@ -78,10 +78,10 @@ session_start();
 
        echo "<ul><li><p> Sport activity: $a_name, Date: $a_day, Place: $a_place</p></li></ul>";
 
-      $stmt = $db->prepare('SELECT id, name, performance_level, fun_level, health, activitie_id FROM performance WHERE activtie_id=:activity_id');
-      $stmt->bindvalue(':activity_id', $a_id);
-      $stmt->execute();
-      $performance = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      $stmt1 = $db->prepare('SELECT id, name, performance_level, fun_level, health, activitie_id FROM performance WHERE activtie_id=:activity_id');
+      $stmt1->bindvalue(':activity_id', $a_id);
+      $stmt1->execute();
+      $performance = $stmt1->fetchAll(PDO::FETCH_ASSOC);
        foreach ($performance as $per) {
           $pname = $per['name'];
           $plevel = $per['performance_level'];
