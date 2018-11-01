@@ -29,20 +29,21 @@
 
    require('dbConnect.php');
    $db = get_db();
-   $d2 = get_db();
+
 
 
    // users table
-   $stmt = $db->prepare('SELECT password, display_name, username, id FROM users');
+   $stmt = $db->prepare('SELECT display_name FROM users WHERE username=:username');
+   $stm->bindvalue(':username', $username);
    $stmt->execute();
-   $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+   $user = $stmt->fetch();
 
    // sports table
-   $stmt2 = $d2->prepare('SELECT name, user_id, id FROM sports');
-   $stmt2->execute();
-   $sports = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+   // $stmt2 = $d2->prepare('SELECT name, user_id, id FROM sports');
+   // $stmt2->execute();
+   // $sports = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 
-   // activites table
+   // // activites table
 
 
 
@@ -74,7 +75,7 @@
    $u  = $masterUser['username'];
    $d  = $masterUser['display_name'];
    $masterId = $masterUser['id'];
-   echo "<h1>$d's PERFORM Home Page</h1>";
+   echo "<h1>$user's PERFORM Home Page</h1>";
    echo "<h2>Sports</h2>";
    echo "<ul>";
    foreach ($sports as $sport) {
