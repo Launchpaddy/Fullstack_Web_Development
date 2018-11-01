@@ -66,7 +66,7 @@
    foreach ($sports as $sport) {
        $sport_name = $sport['name'];
        $sport_id = $sport['id'];
-       echo "<li><a href=\"activities.php?sport_id=$sport_id\">$sport_name</a></li>";
+       echo "<li><a href=\"activities.php?sport_id=$sport_id&sport_name=$sport_name\">$sport_name</a></li>";
 
    }
   echo "</ul>";

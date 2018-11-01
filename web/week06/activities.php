@@ -2,44 +2,46 @@
 session_start();
 
    require('dbConnect.php');
-   $d3 = get_db();
-   $d4 = get_db();
    $db = get_db();
-   $d2 = get_db();
 
-   $sid = $_GET['sport_id'];
+   $sport_id   = $_GET['sport_id'];
+   $sport_name = $_GET['sport_name'];
 
    if (isset($_SESSION['logedIn'])) {
       $username = $_SESSION['username'];
       $password = $_SESSION['password'];
-      $displayName = $_SESSION['displayName'];
+      $display_name = $_SESSION['display_name'];
       //$sportId = $_GET['sport_id'];
    }
    else
    {
-
+      // we should be in the session. if we are not we probaly want to redirect to login
+      header('Location: login.php');
+      die();
    }
 
 
    // users table
-   $stmt = $db->prepare('SELECT password, display_name, username, id FROM users');
-   $stmt->execute();
-   $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+   // $stmt = $db->prepare('SELECT password, display_name, username, id FROM users');
+   // $stmt->execute();
+   // $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
    // sports table
-   $stmt2 = $d2->prepare('SELECT name, user_id, id FROM sports');
-   $stmt2->execute();
-   $sports = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-   $user = $_SESSION['username'];
+   // $stmt2 = $d2->prepare('SELECT name, user_id, id FROM sports');
+   // $stmt2->execute();
+   // $sports = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+   // $user = $_SESSION['username'];
 
-   $stmt3 = $d3->prepare('SELECT id, name, day, place, hour_duration, inviroment_quality, sport_id FROM activities' );
+   // // activites table
+   $stmt3 = $d3->prepare('SELECT id, name, day, place, hour_duration, inviroment_quality FROM activities WHERE sport_id=:sport_id' );
+   $stmt->bindvalue(':sport_id', $sport_id);
+
    $stmt3->execute();
+
    $activities = $stmt3->fetchAll(PDO::FETCH_ASSOC);
 
-   // performance table
-   $stmt4 = $d4->prepare('SELECT id, name, performance_level, fun_level, health, activitie_id FROM performance');
-   $stmt4->execute();
-   $performance = $stmt4->fetchAll(PDO::FETCH_ASSOC);
+   // // performance table
+
 ?>
 
 <!DOCTYPE html>
@@ -52,13 +54,13 @@ session_start();
 <?php
    // $id = $user['id'];
   //
-   foreach ($sports as $sport) {
-      $sname = $sport['name'];
-      $sportid = $sport['id'];
-      if ($sid == $sportid) {
-        echo "<h1>$sname's Activities</h1>";
-      }
-   }
+   // foreach ($sports as $sport) {
+   //    $sname = $sport['name'];
+   //    $sportid = $sport['id'];
+   //    if ($sid == $sportid) {
+        echo "<h1>$sport_name's Activities</h1>";
+   //    }
+   ///}
 
    echo "<a href='homepage.php'>Return to Home</a>";
 
@@ -67,31 +69,34 @@ session_start();
   // echo "<li><p> Playing: $s.  $sid</p></li>";
    // loop for activities
    foreach ($activities  as $activity) {
-      $aname = $activity['name'];
-      $aday = $activity['day'];
-      $aid  = $activity['id'];
-      $sportid = $activity['sport_id'];
-      $place = $activity['place'];
+      $a_name = $activity['name'];
+      $a_day = $activity['day'];
+      $a_id  = $activity['id'];
+      //$sportid = $activity['sport_id'];
+      $a_place = $activity['place'];
       // if the activiy is realated to the right sport for the user
-      if ($sid == $sportid) {
-         echo "<ul><li><p> Sport activity: $aname, Date: $aday, Place: $place</p></li></ul>";
+
+       echo "<ul><li><p> Sport activity: $a_name, Date: $a_day, Place: $a_place</p></li></ul>";
+
+      $stmt = $db->prepare('SELECT id, name, performance_level, fun_level, health, activitie_id FROM performance WHERE activtie_id=:activity_id');
+      $stmt->bindvalue(':activity_id', $a_id);
+      $stmt->execute();
+      $performance = $stmt->fetchAll(PDO::FETCH_ASSOC);
+       foreach ($performance as $per) {
+          $pname = $per['name'];
+          $plevel = $per['performance_level'];
+          $pflevel = $per['fun_level'];
+          $pid  = $per['id'];
+          $perid = $per['activitie_id'];
 
 
-         foreach ($performance as $per) {
-            $pname = $per['name'];
-            $plevel = $per['performance_level'];
-            $pflevel = $per['fun_level'];
-            $pid  = $per['id'];
-            $perid = $per['activitie_id'];
+          echo "<ul><ul><li><p> Performance LVL($plevel)</p></li></ul></ul>";
+          echo "<ul><ul><li><p>Fun Level($pflevel)</p></li></ul></ul>";
 
-            if ($aid == $perid) {
-              echo "<ul><ul><li><p> Performance LVL($plevel)</p></li></ul></ul>";
-               echo "<ul><ul><li><p>Fun Level($pflevel)</p></li></ul></ul>";
-            }
 
-         }
+       }
 
-      }
+
 
 
    }
@@ -124,10 +129,7 @@ session_start();
   </div>
 
  </form>
-<!--  <php
- echo $sid
-   $_SESSION['sport_id'] = $_GET['sport_id'];
-  ?> -->
+
 
 </body>
 </html>

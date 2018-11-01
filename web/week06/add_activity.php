@@ -58,7 +58,7 @@ $stmt->execute();
       ?>
 
    </h1>
-<form action="add_performance.php" method="GET">
+<form action="add_performance.php" method="POST">
     <div class="container">
 
 
@@ -69,7 +69,7 @@ $stmt->execute();
 
     <input type="number" Placeholder="Health Level" name="health" required>
 
-    <input type="hidden" name="activity_id" value="<?php echo $activity_id?>" >
+    <input type="hidden" name="sport_name" value="<?php echo $activity_id?>" >
     <input type="hidden" name="sport_id" value="<?php echo $sport_id?>" >
 
 
