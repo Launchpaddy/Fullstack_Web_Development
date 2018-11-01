@@ -26,11 +26,11 @@ $_SESSION['displayName'] = $displayName;
 // Ideally we don't want to set our session until we have checked this
 // but I'm not so sure php wont just do it anyways no mater what the order of
 // our code is. ether way we can reset the session correctly later.
-if (!isset($username) || $username == "" || !isset($password) || $password == "")
-{
-   header("Location: login.php");
-   die(); // we always include a die after redirects.
-}
+// if (!isset($username) || $username == "" || !isset($password) || $password == "")
+// {
+//    header("Location: login.php");
+//    die(); // we always include a die after redirects.
+// }
 
 // not sure if i will be using this yet
 //$_SESSION['logedIn'] = true;
@@ -42,14 +42,14 @@ VALUES (:username, :password, :displayName);";
 
 
 
+// prepare the statement
+$stmt = $db->prepare($query);
+
 // be do some more checking to make sure nobody has put
 // icky things in our query
 $stmt->bindValue(":username",    $username, PDO::PARAM_STR);
 $stmt->bindValue(":password",    $hashedPassword, PDO::PARAM_STR);
 $stmt->bindValue(":displayName", $displayName, PDO::PARAM_STR);
-
-// prepare the statement
-$stmt = $db->prepare($query);
 
 // run everything
 $stmt->execute();
