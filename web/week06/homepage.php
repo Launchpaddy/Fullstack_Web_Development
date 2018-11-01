@@ -39,8 +39,9 @@
    $stmt = $db->prepare('SELECT name, id FROM sports WHERE user_id=:user_id');
 
    $stmt->bindvalue(':user_id', $user_id);
+   $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-   $row = $stmt->fetch();
+   //$row = $stmt->fetch();
    $sports = $stmt->execute();
 
    //$userDisplayName = $row['display_name'];
@@ -85,12 +86,12 @@
    <h3>user ID: $user_id</h3>";
    // echo "<ul>";
    foreach ($sports as $sport) {
-      // $sname = $sport['name'];
+       $sport_name = $sport['name'];
       // $j = $sport['user_id'];
        $sport_id = $sport['id'];
       // if ($masterId == $j) {
          // $_SESSION['sportId'] = $sid;
-         echo "<li><a href=\"activities.php?sport_id=$sport_id\">$sname</a></li>";
+         echo "<li><a href=\"activities.php?sport_id=$sport_id\">$sport_name</a></li>";
      // }
    }
    // echo "</ul>";
