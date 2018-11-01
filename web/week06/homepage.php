@@ -36,13 +36,14 @@
 
 
    // users table
-   $stmt = $db->prepare('SELECT display_name FROM users WHERE username=:username');
-   $stmt->bindvalue(':username', $username);
-   $user = $stmt->execute();
+   $stmt = $db->prepare('SELECT name, id FROM sports WHERE user_id=:user_id');
+
+   $stmt->bindvalue(':user_id', $user_id);
 
    $row = $stmt->fetch();
+   $sports = $stmt->execute();
 
-   $userDisplayName = $row['display_name'];
+   //$userDisplayName = $row['display_name'];
    // sports table
    // $stmt2 = $d2->prepare('SELECT name, user_id, id FROM sports');
    // $stmt2->execute();
@@ -83,15 +84,15 @@
    <h3>display name: $display_name</h3>
    <h3>user ID: $user_id</h3>";
    // echo "<ul>";
-   // foreach ($sports as $sport) {
-   //    $sname = $sport['name'];
-   //    $j = $sport['user_id'];
-   //    $sid = $sport['id'];
-   //    if ($masterId == $j) {
-   //       // $_SESSION['sportId'] = $sid;
-   //       echo "<li><a href=\"activities.php?sport_id=$sid\">$sname</a></li>";
-   //    }
-   // }
+   foreach ($sports as $sport) {
+      // $sname = $sport['name'];
+      // $j = $sport['user_id'];
+       $sport_id = $sport['id'];
+      // if ($masterId == $j) {
+         // $_SESSION['sportId'] = $sid;
+         echo "<li><a href=\"activities.php?sport_id=$sport_id\">$sname</a></li>";
+     // }
+   }
    // echo "</ul>";
  ?>
 
