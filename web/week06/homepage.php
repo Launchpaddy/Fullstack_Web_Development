@@ -39,16 +39,13 @@
 
    $row = $stmt->fetch();
 
-   $userDisplayName = $row["display_name"];
+   $userDisplayName = $row['display_name'];
    // sports table
    // $stmt2 = $d2->prepare('SELECT name, user_id, id FROM sports');
    // $stmt2->execute();
    // $sports = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 
-   // // activites table
-
-
-
+   // activites table
 
     // echo "<h1>username: $perfUser Password: $perfPass </h1>";
 
