@@ -1,9 +1,7 @@
 <?php
+
    session_start();
- ?>
 
-
-<?php
    if (isset($_SESSION['logedIn'])) {
       $username = $_SESSION['username'];
       $password = $_SESSION['password'];
@@ -40,12 +38,13 @@
 <html>
 <head>
    <title>Home Page</title>
+   <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 
-  <h1><?php echo $display_name; ?>'s PERFORM Home Page</h1>";
-  <h2>Sports</h2>";
+  <h1><?php echo $display_name; ?>'s PERFORM Home Page</h1>
+  <h2>Sports</h2>
   <form action="add_sport.php" method="POST">
     <div class="container">
 
