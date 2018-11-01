@@ -76,15 +76,15 @@ session_start();
       $stmt1->execute();
       $performance = $stmt1->fetch();
 
-      // $pname = $performance['name'];
-      // $plevel = $performance['performance_level'];
-      // $pflevel = $performance['fun_level'];
-      // $pid  = $performance['id'];
-      // $perid = $performance['activitie_id'];
+      $pname = $performance['name'];
+      $plevel = $performance['performance_level'];
+      $pflevel = $performance['fun_level'];
+      $pid  = $performance['id'];
+      $perid = $performance['activitie_id'];
 
 
-      // echo "<ul><ul><li><p> Performance LVL($plevel)</p></li></ul></ul>";
-      // echo "<ul><ul><li><p>Fun Level($pflevel)</p></li></ul></ul>";
+      echo "<ul><ul><li><p> Performance LVL($plevel)</p></li></ul></ul>";
+      echo "<ul><ul><li><p>Fun Level($pflevel)</p></li></ul></ul>";
 
 
 
