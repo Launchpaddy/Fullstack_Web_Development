@@ -43,7 +43,10 @@
 
 </head>
 <body>
- <form action="add_sport.php" method="POST">
+
+  <h1><?php echo $display_name; ?>'s PERFORM Home Page</h1>";
+  <h2>Sports</h2>";
+  <form action="add_sport.php" method="POST">
     <div class="container">
 
     <label for="sport"><b>Add Sport</b></label>
@@ -57,11 +60,9 @@
 
   </div>
 
- </form>
+  </form>
 <?php
 
-   echo "<h1>$display_name's PERFORM Home Page</h1>";
-   echo "<h2>Sports</h2>";
   echo "<ul>";
    foreach ($sports as $sport) {
        $sport_name = $sport['name'];
