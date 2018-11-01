@@ -33,12 +33,12 @@ session_start();
    // $user = $_SESSION['username'];
 
    // // activites table
-   $stmt3 = $d3->prepare('SELECT id, name, day, place, hour_duration, inviroment_quality FROM activities WHERE sport_id=:sport_id' );
+   $stmt = $db->prepare('SELECT id, name, day, place, hour_duration, inviroment_quality FROM activities WHERE sport_id=:sport_id' );
    $stmt->bindvalue(':sport_id', $sport_id);
 
-   $stmt3->execute();
+   $stmt->execute();
 
-   $activities = $stmt3->fetchAll(PDO::FETCH_ASSOC);
+   $activities = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
    // // performance table
 
@@ -52,15 +52,8 @@ session_start();
 <body>
 
 <?php
-   // $id = $user['id'];
-  //
-   // foreach ($sports as $sport) {
-   //    $sname = $sport['name'];
-   //    $sportid = $sport['id'];
-   //    if ($sid == $sportid) {
-        echo "<h1>$sport_name's Activities</h1>";
-   //    }
-   ///}
+
+  echo "<h1>$sport_name's Activities</h1>";
 
    echo "<a href='homepage.php'>Return to Home</a>";
 
