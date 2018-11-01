@@ -56,6 +56,6 @@ $stmt->execute();
 
 // Redirect to the login page
 header('location:login.php');
-die();
+//die();
 
 ?>
