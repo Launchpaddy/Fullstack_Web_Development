@@ -28,6 +28,7 @@ if (isset($_POST['txtUsername']) && isset($_POST['txtPassword'])) {
       // password was correct, put the user on the session, and redirect to home
       $_SESSION['username'] = $username;
       $_SESSION['display_name'] = $row['display_name'];
+      $_SESSION['password'] = $row['password'];
 
       $_SESSION['logedIn'] = true;
       header("Location: homepage.php");

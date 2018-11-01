@@ -6,8 +6,8 @@
 <?php
    if (isset($_SESSION['logedIn'])) {
       $username = $_SESSION['username'];
-      // $password = $_SESSION['password'];
-      // $displayName = $_SESSION['displayName'];
+      $password = $_SESSION['password'];
+      $displayName = $_SESSION['displayName'];
    }
    else
    {
@@ -21,7 +21,7 @@
       $password = htmlspecialchars($_POST['password']);
       $_SESSION['password'] = $password;
 
-      $displayName = htmlspecialchars($_POST['displayName']);
+      $displayName = htmlspecialchars($_POST['display_name']);
       $_SESSION['displayName'] = $displayName;
       $_SESSION['logedIn'] = true;
    }
