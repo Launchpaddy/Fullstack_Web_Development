@@ -3,7 +3,7 @@ session_start();
 $badLogin = false;
 
 // should only happen if the form has been submitted
-if ($_POST['textUsername'] && $_POST['textPassword']) {
+if (isset($_POST['textUsername']) && isset($_POST['textPassword'])) {
 
   $username = $_POST['textUsername'];
   $password = $_POST['textPassword'];
