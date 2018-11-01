@@ -114,7 +114,7 @@ session_start();
 
 
    <input type="hidden" name="sport_id" value="<?php echo $sport_id?>" >
-   <input type="hidden" name="activity_id" value="<?php echo $a_id?>" >
+   <!-- <input type="hidden" name="activity_id" value="<php echo $a_id?>" > -->
 
 
     <button type="submit">Add new Activity</button>
