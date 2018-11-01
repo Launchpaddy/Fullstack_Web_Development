@@ -17,7 +17,7 @@ $_SESSION['password'] = $password;
 
 // This is how we hash our password so we don't have
 // any of our users actual passwords on our server
-$hashedPassword = password_hash($password);
+$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 $displayName = htmlspecialchars($_POST['displayName']);
 $_SESSION['displayName'] = $displayName;
@@ -26,11 +26,11 @@ $_SESSION['displayName'] = $displayName;
 // Ideally we don't want to set our session until we have checked this
 // but I'm not so sure php wont just do it anyways no mater what the order of
 // our code is. ether way we can reset the session correctly later.
-// if (!isset($username) || $username == "" || !isset($password) || $password == "")
-// {
-//    header("Location: login.php");
-//    die(); // we always include a die after redirects.
-// }
+if (!isset($username) || $username == "" || !isset($password) || $password == "")
+{
+   header("Location: login.php");
+   die(); // we always include a die after redirects.
+}
 
 // not sure if i will be using this yet
 //$_SESSION['logedIn'] = true;
