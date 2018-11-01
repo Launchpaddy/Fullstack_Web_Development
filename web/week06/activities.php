@@ -71,10 +71,10 @@ session_start();
 
       echo "<ul><li><p> Sport activity: $a_name, Date: $a_day, Place: $a_place</p></li></ul>";
 
-      // $stmt1 = $db->prepare('SELECT id, name, performance_level, fun_level, health, activitie_id FROM performance WHERE activtie_id=:activity_id');
-      // $stmt1->bindvalue(':activity_id', $a_id);
-      // $stmt1->execute();
-      // $performance = $stmt1->fetch();
+      $stmt1 = $db->prepare('SELECT id, name, performance_level, fun_level, health, activitie_id FROM performance WHERE activitie_id=:activity_id');
+      $stmt1->bindvalue(':activity_id', $a_id);
+      $stmt1->execute();
+      $performance = $stmt1->fetch();
 
       // $pname = $performance['name'];
       // $plevel = $performance['performance_level'];
