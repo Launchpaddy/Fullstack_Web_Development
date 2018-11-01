@@ -6,8 +6,8 @@
 <?php
    if (isset($_SESSION['logedIn'])) {
       $username = $_SESSION['username'];
-      $password = $_SESSION['password'];
-      $displayName = $_SESSION['displayName'];
+      // $password = $_SESSION['password'];
+      // $displayName = $_SESSION['displayName'];
    }
    else
    {
@@ -35,8 +35,7 @@
    // users table
    $stmt = $db->prepare('SELECT display_name FROM users WHERE username=:username');
    $stm->bindvalue(':username', $username);
-   $stmt->execute();
-   $user = $stmt->fetch();
+   $user = $stmt->execute();
 
    // sports table
    // $stmt2 = $d2->prepare('SELECT name, user_id, id FROM sports');
@@ -59,35 +58,33 @@
 </head>
 <body>
 <?php
-    foreach ($users as $user) {
-      $p  = $user['password'];
-      $u  = $user['username'];
-      $d  = $user['display_name'];
-      if ($username == $u && $password == $p) {
-         // echo "<h1>$d's Home Page</h1>";
-         $masterUser = $user;
+   //  foreach ($users as $user) {
+   //    $p  = $user['password'];
+   //    $u  = $user['username'];
+   //    $d  = $user['display_name'];
+   //    if ($username == $u && $password == $p) {
+   //       // echo "<h1>$d's Home Page</h1>";
+   //       $masterUser = $user;
+   //    }
+   // }
 
-
-      }
-   }
-
-   $p  = $masterUser['password'];
-   $u  = $masterUser['username'];
-   $d  = $masterUser['display_name'];
-   $masterId = $masterUser['id'];
+   // $p  = $masterUser['password'];
+   // $u  = $masterUser['username'];
+   // $d  = $masterUser['display_name'];
+   // $masterId = $masterUser['id'];
    echo "<h1>$user's PERFORM Home Page</h1>";
    echo "<h2>Sports</h2>";
-   echo "<ul>";
-   foreach ($sports as $sport) {
-      $sname = $sport['name'];
-      $j = $sport['user_id'];
-      $sid = $sport['id'];
-      if ($masterId == $j) {
-         // $_SESSION['sportId'] = $sid;
-         echo "<li><a href=\"activities.php?sport_id=$sid\">$sname</a></li>";
-      }
-   }
-   echo "</ul>";
+   // echo "<ul>";
+   // foreach ($sports as $sport) {
+   //    $sname = $sport['name'];
+   //    $j = $sport['user_id'];
+   //    $sid = $sport['id'];
+   //    if ($masterId == $j) {
+   //       // $_SESSION['sportId'] = $sid;
+   //       echo "<li><a href=\"activities.php?sport_id=$sid\">$sname</a></li>";
+   //    }
+   // }
+   // echo "</ul>";
  ?>
 
  <form action="add_sport.php" method="POST">
