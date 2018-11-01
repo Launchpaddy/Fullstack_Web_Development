@@ -13,7 +13,7 @@ if (isset($_POST['txtUsername']) && isset($_POST['txtPassword'])) {
 
   echo $username;
 
-  $stmt = $db->prepare('SELECT password FROM users WHERE username=:username');
+  $stmt = $db->prepare('SELECT password, username, display_name FROM users WHERE username=:username');
   $stmt->bindvalue(':username', $username);
   $result = $stmt->execute();
 
@@ -27,6 +27,7 @@ if (isset($_POST['txtUsername']) && isset($_POST['txtPassword'])) {
     {
       // password was correct, put the user on the session, and redirect to home
       $_SESSION['username'] = $username;
+      $_SESSION['display_name'] = $row['display_name'];
 
       $_SESSION['logedIn'] = true;
       header("Location: homepage.php");
