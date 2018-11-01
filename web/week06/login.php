@@ -11,9 +11,8 @@ if (isset($_POST['txtUsername']) && isset($_POST['txtPassword'])) {
   require('dbConnect.php');
   $db = get_db();
 
-  echo $username;
 
-  $stmt = $db->prepare('SELECT password, username, display_name FROM users WHERE username=:username');
+  $stmt = $db->prepare('SELECT password, id, display_name FROM users WHERE username=:username');
   $stmt->bindvalue(':username', $username);
   $result = $stmt->execute();
 
@@ -26,6 +25,7 @@ if (isset($_POST['txtUsername']) && isset($_POST['txtPassword'])) {
     if (password_verify($password, $hashedPasswordFromDB))
     {
       // password was correct, put the user on the session, and redirect to home
+      $_SESSION['user_id'] = $row['id'];
       $_SESSION['username'] = $username;
       $_SESSION['display_name'] = $row['display_name'];
       $_SESSION['password'] = $row['password'];

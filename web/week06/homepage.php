@@ -8,22 +8,25 @@
       $username = $_SESSION['username'];
       $password = $_SESSION['password'];
       $display_name = $_SESSION['display_name'];
+      $user_id = $_SESSION['user_id'];
    }
    else
    {
+      // we should be in the session. if we are not we probaly want to redirect to login
+
       // $perfUser = $_POST['username'];
       // $perfPass = $_POST['password'];
       // $perfDName = $_POST['displayName'];
 
-      $username = htmlspecialchars($_POST['username']);
-      $_SESSION['username'] = $username;
+      // $username = htmlspecialchars($_POST['username']);
+      // $_SESSION['username'] = $username;
 
-      $password = htmlspecialchars($_POST['password']);
-      $_SESSION['password'] = $password;
+      // $password = htmlspecialchars($_POST['password']);
+      // $_SESSION['password'] = $password;
 
-      $displayName = htmlspecialchars($_POST['display_name']);
-      $_SESSION['displayName'] = $displayName;
-      $_SESSION['logedIn'] = true;
+      // $displayName = htmlspecialchars($_POST['display_name']);
+      // $_SESSION['displayName'] = $displayName;
+      // $_SESSION['logedIn'] = true;
    }
 
 
@@ -77,7 +80,8 @@
    echo "<h2>Sports</h2>";
    echo " <h3>username: $username</h3>
    <h3>password: $password</h3>
-   <h3>display name: $display_name</h3>";
+   <h3>display name: $display_name</h3>
+   <h3>user ID: $user_id</h3>";
    // echo "<ul>";
    // foreach ($sports as $sport) {
    //    $sname = $sport['name'];
