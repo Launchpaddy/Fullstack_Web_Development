@@ -69,7 +69,7 @@ session_start();
       $a_place = $activity['place'];
       // if the activiy is realated to the right sport for the user
 
-      echo "<ul><li><p> Sport activity: $a_name, Date: $a_day, Place: $a_place</p></li></ul>";
+      echo "<ul><li><p> Sport activity: $a_name, Date: $a_day, Place: $a_place ActivityID: $a_id</p></li></ul>";
 
       $stmt1 = $db->prepare('SELECT id, name, performance_level, fun_level, health, activitie_id FROM performance WHERE activitie_id=:activity_id');
       $stmt1->bindvalue(':activity_id', $a_id);
