@@ -97,7 +97,7 @@ session_start();
 
 ?>
 
- <form action="add_activity.php" method="GET">
+ <form action="add_activity.php" method="POST">
     <div class="container">
 
     <label for="activity"><b>Activity</b></label>

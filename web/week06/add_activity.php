@@ -7,19 +7,19 @@ $db = get_db();
 
 //$sport_id = $_SESSION['sport_id'];
 
-$activity = htmlspecialchars($_GET['activity']);
-$date     = htmlspecialchars($_GET['date']);
-$place    = htmlspecialchars($_GET['place']);
-$duration = htmlspecialchars($_GET['duration']);
-$quality  = htmlspecialchars($_GET['quality']);
-$sport_id = htmlspecialchars($_GET['sport_id']);
-$activity_id = htmlspecialchars($_GET['activity_id']);
+$activity = htmlspecialchars($_POST['activity']);
+$date     = htmlspecialchars($_POST['date']);
+$place    = htmlspecialchars($_POST['place']);
+$duration = htmlspecialchars($_POST['duration']);
+$quality  = htmlspecialchars($_POST['quality']);
+$sport_id = htmlspecialchars($_POST['sport_id']);
+$activity_id = htmlspecialchars($_POST['activity_id']);
 
 
 
  $query = "
  INSERT INTO activities (name, day, place, hour_duration, inviroment_quality, sport_id)
- VALUES (:name, :day, :place, :duration, :quality, :id);";
+ VALUES (:name, :day, :place, :duration, :quality, :sport_id);";
 
 //  $query2 = "INSERT INTO activities (name, sport_id) VALUES (:name, :id);"
 
@@ -32,7 +32,7 @@ $stmt->bindValue(":day",      $date,     PDO::PARAM_STR);
 $stmt->bindValue(":place",    $place,    PDO::PARAM_STR);
 $stmt->bindValue(":duration", $duration, PDO::PARAM_INT);
 $stmt->bindValue(":quality",  $quality,  PDO::PARAM_INT);
-$stmt->bindValue(":id",       $sport_id, PDO::PARAM_INT);
+$stmt->bindValue(":sport_id", $sport_id, PDO::PARAM_INT);
 //  echo "$id";
 
 
