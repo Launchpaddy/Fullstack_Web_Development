@@ -7,7 +7,7 @@
    if (isset($_SESSION['logedIn'])) {
       $username = $_SESSION['username'];
       $password = $_SESSION['password'];
-      $displayName = $_SESSION['displayName'];
+      $display_name = $_SESSION['display_name'];
    }
    else
    {
@@ -55,6 +55,9 @@
 <html>
 <head>
    <title>Home Page</title>
+   <h3>username: $username</h3>
+   <h3>password: $password</h3>
+   <h3>display name: $display_name</h3>
 </head>
 <body>
 <?php
@@ -74,6 +77,7 @@
    // $masterId = $masterUser['id'];
    echo "<h1>$userDisplayName's PERFORM Home Page</h1>";
    echo "<h2>Sports</h2>";
+   echo ""
    // echo "<ul>";
    // foreach ($sports as $sport) {
    //    $sname = $sport['name'];
