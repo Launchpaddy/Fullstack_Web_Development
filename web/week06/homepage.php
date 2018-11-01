@@ -103,7 +103,7 @@
 
     <input type="text" placeholder="Enter Sport" name="sport" required>
 
-    <input type="hidden" name="id" value="<?php echo $user_id ?>" >
+    <input type="hidden" name="user_id" value="<?php echo $user_id ?>" >
 
 
     <button type="submit">Add new Sport</button>

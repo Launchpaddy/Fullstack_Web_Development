@@ -4,8 +4,8 @@ session_start();
 require('dbConnect.php');
 $db = get_db();
 
-$sport = $_POST['sport'];
-$user_id    = $_POST['user_id'];
+$sport   = $_POST['sport'];
+$user_id = $_POST['user_id'];
 
 
 
@@ -28,4 +28,4 @@ header('location:homepage.php');
 //die();
 
 
-// ?>
+ ?>
