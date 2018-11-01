@@ -113,8 +113,8 @@ session_start();
    <input type="number" Placeholder="Inviroment Quality" name="quality" required>
 
 
-   <input type="hidden" name="sport_id" value="<?php echo $sid?>" >
-   <input type="hidden" name="activity_id" value="<?php echo $aid?>" >
+   <input type="hidden" name="sport_id" value="<?php echo $sport_id?>" >
+   <input type="hidden" name="activity_id" value="<?php echo $a_id?>" >
 
 
     <button type="submit">Add new Activity</button>
