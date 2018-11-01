@@ -5,8 +5,8 @@ $badLogin = false;
 // should only happen if the form has been submitted
 if (isset($_POST['txtUsername']) && isset($_POST['txtPassword'])) {
 
-  $username = $_POST['textUsername'];
-  $password = $_POST['textPassword'];
+  $username = $_POST['txtUsername'];
+  $password = $_POST['txtPassword'];
 
   require('dbConnect.php');
   $db = get_db();
@@ -66,7 +66,7 @@ if (isset($_POST['txtUsername']) && isset($_POST['txtPassword'])) {
   <div class="container">
     <?php
       if ($badLogin) {
-        echo "Incorect usernam or password";
+        echo "Incorect username or password <br/>";
       }
 
      ?>
