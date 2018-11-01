@@ -34,9 +34,12 @@
 
    // users table
    $stmt = $db->prepare('SELECT display_name FROM users WHERE username=:username');
-   $stm->bindvalue(':username', $username);
+   $stmt->bindvalue(':username', $username);
    $user = $stmt->execute();
 
+   $row = $stmt->fetch();
+
+   $userDisplayName = $row["display_name"];
    // sports table
    // $stmt2 = $d2->prepare('SELECT name, user_id, id FROM sports');
    // $stmt2->execute();
@@ -72,7 +75,7 @@
    // $u  = $masterUser['username'];
    // $d  = $masterUser['display_name'];
    // $masterId = $masterUser['id'];
-   echo "<h1>$user's PERFORM Home Page</h1>";
+   echo "<h1>$userDisplayName's PERFORM Home Page</h1>";
    echo "<h2>Sports</h2>";
    // echo "<ul>";
    // foreach ($sports as $sport) {
