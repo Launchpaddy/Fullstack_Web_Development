@@ -7,13 +7,13 @@ $db = get_db();
 
 
 
- $name        = htmlspecialchars($_GET['name']);
- $performance = htmlspecialchars($_GET['performance']);
- $fun         = htmlspecialchars($_GET['fun']);
- $health      = htmlspecialchars($_GET['health']);
- $activity_id = htmlspecialchars($_GET['activity_id']);
+ $name        = htmlspecialchars($_POST['name']);
+ $performance = htmlspecialchars($_POST['performance']);
+ $fun         = htmlspecialchars($_POST['fun']);
+ $health      = htmlspecialchars($_POST['health']);
+ $activity_id = htmlspecialchars($_POST['activity_id']);
 
- $sport_id = htmlspecialchars($_GET['sport_id']);
+ $sport_id = htmlspecialchars($_POST['sport_id']);
 
 
 
