@@ -77,7 +77,7 @@
    // $u  = $masterUser['username'];
    // $d  = $masterUser['display_name'];
    // $masterId = $masterUser['id'];
-   echo "<h1>$userDisplayName's PERFORM Home Page</h1>";
+   echo "<h1>$display_name's PERFORM Home Page</h1>";
    echo "<h2>Sports</h2>";
    echo " <h3>username: $username</h3>
    <h3>password: $password</h3>
@@ -103,7 +103,7 @@
 
     <input type="text" placeholder="Enter Sport" name="sport" required>
 
-    <input type="hidden" name="id" value="<?php echo $masterId ?>" >
+    <input type="hidden" name="id" value="<?php echo $user_id ?>" >
 
 
     <button type="submit">Add new Sport</button>
