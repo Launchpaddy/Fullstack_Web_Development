@@ -11,6 +11,7 @@ if (isset($_POST['txtUsername']) && isset($_POST['txtPassword'])) {
   require('dbConnect.php');
   $db = get_db();
 
+  echo $username;
 
   $stmt = $db->prepare('SELECT username FROM users WHERE username=:username');
   $stmt->bindvalue(':username', $username);
