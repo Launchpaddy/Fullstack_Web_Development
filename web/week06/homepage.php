@@ -39,10 +39,10 @@
    $stmt = $db->prepare('SELECT name, id FROM sports WHERE user_id=:user_id');
 
    $stmt->bindvalue(':user_id', $user_id);
-   $stmt->fetchAll(PDO::FETCH_ASSOC);
+   $sports = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
    //$row = $stmt->fetch();
-   $sports = $stmt->execute();
+   $stmt->execute();
 
    //$userDisplayName = $row['display_name'];
    // sports table
