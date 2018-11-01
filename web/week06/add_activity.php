@@ -5,7 +5,6 @@ session_start();
 require('dbConnect.php');
 $db = get_db();
 
-//$sport_id = $_SESSION['sport_id'];
 
 $activity = htmlspecialchars($_POST['activity']);
 $date     = htmlspecialchars($_POST['date']);
@@ -40,10 +39,7 @@ $stmt->execute();
 
 // now we need to get the id back from the activity we just created
 
-$query2 = "SELECT id FROM activities WHERE sport_id=:s_id;";
-$stmt1 = $db->perpare($query2);
-$stmt1->bindValue(":s_id", $_POST['sport_id'], PDO::PARAM_INT);
-$stmt1->execute();
+
 
 // $activity_id = $stmt1->fetch();
 
@@ -72,7 +68,7 @@ $stmt1->execute();
 
     <input type="number" Placeholder="Health Level" name="health" required>
 
-    <input type="hidden" name="sport_name" value="<?php echo $activity_id?>" >
+    <!-- <input type="hidden" name="sport_name" value="<php echo $activity_id?>" > -->
     <input type="hidden" name="sport_id" value="<?php echo $sport_id?>" >
 
 

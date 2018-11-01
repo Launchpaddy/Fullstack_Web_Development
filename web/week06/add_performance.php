@@ -5,6 +5,11 @@ session_start();
 require('dbConnect.php');
 $db = get_db();
 
+$query2 = "SELECT id FROM activities WHERE sport_id=:s_id;";
+$stmt1 = $db->perpare($query2);
+$stmt1->bindValue(":s_id", $_POST['sport_id'], PDO::PARAM_INT);
+$stmt1->execute();
+
 
 
  $name        = htmlspecialchars($_POST['name']);
