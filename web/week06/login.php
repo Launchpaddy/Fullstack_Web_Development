@@ -80,7 +80,7 @@ if ($_POST['textUsername'] && $_POST['textPassword']) {
     <input type="password" placeholder="Enter Password" name="txtPassword" required>
 
     <button type="submit">Login</button>
-    <a href="create_account.php">Create New Account</a>
+    <a href="create_account.php">Create New Perform Account</a>
 
   </div>
 
