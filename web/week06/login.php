@@ -1,8 +1,52 @@
 <?php
 session_start();
+$badLogin = false;
 
-$_SESSION['perfUser'];
+// should only happen if the form has been submitted
+if ($_POST['textUsername'] && $_POST['textPassword']) {
+
+  $username = $_POST['textUsername'];
+  $password = $_POST['textPassword'];
+
+  require('dbConnect.php');
+  $db = get_db();
+
+
+  $stmt = $db->prepare('SELECT username FROM users WHERE username=:username');
+  $stmt->bindvalue(':username', $username);
+  $result = $stmt->execute();
+
+  // this will only happen if we have found this username in our database
+  if ($result) {
+
+    $row = $stmt->fetch();
+    $hashedPasswordFromDB = $row['password'];
+    // now check to see if the hashed password matches
+    if (password_verify($password, $hashedPasswordFromDB))
+    {
+      // password was correct, put the user on the session, and redirect to home
+      $_SESSION['username'] = $username;
+      header("Location: homepage.php");
+      die(); // we always include a die after redirects.
+    }
+    else
+    {
+      $badLogin = true;
+    }
+
+  }
+  else
+  {
+    $badLogin = true;
+  }
+
+
+}
+
 ?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,20 +59,25 @@ $_SESSION['perfUser'];
 
 <h2>Login to PERFORM</h2>
 
-<form action="homepage.php" method="POST">
+<form action="login.php" method="POST">
 
 
-  <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar">
-  </div>
 
   <div class="container">
+    <?php
+      if ($badLogin) {
+        echo "Incorect usernam or password";
+      }
+
+     ?>
+
+
     <label for="username"><b>Username</b></label>
 
-    <input type="text" placeholder="Enter Username" name="username" required>
+    <input type="text" placeholder="Enter Username" name="txtUsername" required>
 
     <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
+    <input type="password" placeholder="Enter Password" name="txtPassword" required>
 
     <button type="submit">Login</button>
     <a href="create_account.php">Create New Account</a>
