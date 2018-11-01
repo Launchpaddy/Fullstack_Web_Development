@@ -13,7 +13,7 @@ if (isset($_POST['txtUsername']) && isset($_POST['txtPassword'])) {
 
   echo $username;
 
-  $stmt = $db->prepare('SELECT username FROM users WHERE username=:username');
+  $stmt = $db->prepare('SELECT password FROM users WHERE username=:username');
   $stmt->bindvalue(':username', $username);
   $result = $stmt->execute();
 
