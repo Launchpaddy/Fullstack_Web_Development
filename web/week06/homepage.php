@@ -84,7 +84,7 @@
    <h3>password: $password</h3>
    <h3>display name: $display_name</h3>
    <h3>user ID: $user_id</h3>";
-   // echo "<ul>";
+    echo "<ul>";
    foreach ($sports as $sport) {
        $sport_name = $sport['name'];
       // $j = $sport['user_id'];
@@ -94,7 +94,7 @@
          echo "<li><a href=\"activities.php?sport_id=$sport_id\">$sport_name</a></li>";
      // }
    }
-   // echo "</ul>";
+    echo "</ul>";
  ?>
 
  <form action="add_sport.php" method="POST">
