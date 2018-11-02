@@ -52,6 +52,11 @@ session_start();
 </head>
 <body>
 
+  <h1><?php  echo $sport_name?>'s Activities</h1>
+
+  <a href='homepage.php'>Return to Home</a>
+
+
  <form action="add_activity.php" method="POST">
     <div class="container">
 
@@ -77,10 +82,6 @@ session_start();
 
  </form>
 <?php
-
-  echo "<h1>$sport_name's Activities</h1>";
-
-   echo "<a href='homepage.php'>Return to Home</a>";
 
 
 
