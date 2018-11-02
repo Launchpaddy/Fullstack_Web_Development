@@ -39,7 +39,7 @@ session_start();
    $stmt->execute();
 
    $activities = $stmt->fetchAll(PDO::FETCH_ASSOC);
-   $activity = $stmt->fetch();
+  // $activity = $stmt->fetch());
 
    // // performance table
 
@@ -62,7 +62,7 @@ session_start();
 
   // echo "<li><p> Playing: $s.  $sid</p></li>";
    // loop for activities
-   // foreach ($activities  as $activity) {
+   foreach ($activities  as $activity) {
       $a_name = $activity['name'];
       $a_day = $activity['day'];
       $a_id  = $activity['id'];
@@ -93,7 +93,7 @@ session_start();
 
 
 
-   // }
+   }
 
 
 ?>
