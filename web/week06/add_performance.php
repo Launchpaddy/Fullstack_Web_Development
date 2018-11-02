@@ -9,17 +9,9 @@ $db = get_db();
  $performance = htmlspecialchars($_POST['performance']);
  $fun         = htmlspecialchars($_POST['fun']);
  $health      = htmlspecialchars($_POST['health']);
-// $activity_id = htmlspecialchars($_POST['activity_id']);
+$activity_id = htmlspecialchars($_POST['activity_id']);
 
  $sport_id = $_POST['sport_id'];
-
-$query2 = "SELECT id FROM activities WHERE sport_id=:s_id;";
-$stmt1 = $db->perpare($query2);
-$stmt1->bindValue(":s_id", $sport_id, PDO::PARAM_INT);
-$stmt1->execute();
-$activity_id = $stmt1->fetch();
-
-
 
 
 
@@ -43,6 +35,17 @@ $stmt->bindValue(":activity_id",  $activity_id,  PDO::PARAM_INT);
 
 
 $stmt->execute();
+
+
+$query2 = "SELECT id FROM activities WHERE sport_id=:s_id;";
+$stmt1 = $db->perpare($query2);
+$stmt1->bindValue(":s_id", $sport_id, PDO::PARAM_INT);
+$stmt1->execute();
+$activity_id = $stmt1->fetch();
+
+
+
+
 
 
 
