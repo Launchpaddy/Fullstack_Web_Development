@@ -74,18 +74,23 @@ session_start();
 
       $stmt1 = $db->prepare('SELECT id, name, performance_level, fun_level, health, activitie_id FROM performance WHERE activitie_id=:activity_id');
       $stmt1->bindvalue(':activity_id', $a_id);
-      $stmt1->execute();
-      $performance = $stmt1->fetch();
+       $result = $stmt1->execute();
 
-      $pname = $performance['name'];
-      $plevel = $performance['performance_level'];
-      $pflevel = $performance['fun_level'];
-      $pid  = $performance['id'];
-      $perid = $performance['activitie_id'];
+       if ($result) {
+
+         $performance = $stmt1->fetch();
+
+         $pname = $performance['name'];
+         $plevel = $performance['performance_level'];
+         $pflevel = $performance['fun_level'];
+         $pid  = $performance['id'];
+         $perid = $performance['activitie_id'];
 
 
-      echo "<ul><ul><li><p> Performance LVL($plevel)</p></li></ul></ul>";
-      echo "<ul><ul><li><p>Fun Level($pflevel)</p></li></ul></ul>";
+         echo "<ul><ul><li><p> Performance LVL($plevel)</p></li></ul></ul>";
+         echo "<ul><ul><li><p>Fun Level($pflevel)</p></li></ul></ul>";
+
+       }
 
 
 
