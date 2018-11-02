@@ -52,6 +52,30 @@ session_start();
 </head>
 <body>
 
+ <form action="add_activity.php" method="POST">
+    <div class="container">
+
+    <label for="activity"><b>Activity</b></label>
+
+   <input type="text"   placeholder="Enter Activity" name="activity" required>
+
+   <input type="date"   placeholder="Enter Date" name="date" required>
+
+   <input type="text"   Placeholder="Enter Location" name="place" required>
+
+   <input type="number" Placeholder="Duration" name="duration" required>
+
+   <input type="number" Placeholder="Inviroment Quality" name="quality" required>
+
+
+   <input type="hidden" name="sport_id" value="<?php echo $sport_id?>" >
+   <!-- <input type="hidden" name="activity_id" value="<php echo $a_id?>" > -->
+
+   <button type="submit">Add new Activity</button>
+
+  </div>
+
+ </form>
 <?php
 
   echo "<h1>$sport_name's Activities</h1>";
@@ -74,7 +98,7 @@ session_start();
 
       $stmt1 = $db->prepare('SELECT id, name, performance_level, fun_level, health, activitie_id FROM performance WHERE activitie_id=:activity_id');
       $stmt1->bindvalue(':activity_id', $a_id);
-       $result = $stmt1->execute();
+      $result = $stmt1->execute();
 
        if ($result) {
 
@@ -92,43 +116,10 @@ session_start();
 
        }
 
-
-
-
-
-
-
    }
 
 
 ?>
-
- <form action="add_activity.php" method="POST">
-    <div class="container">
-
-    <label for="activity"><b>Activity</b></label>
-
-   <input type="text"   placeholder="Enter Activity" name="activity" required>
-
-   <input type="date"   placeholder="Enter Date" name="date" required>
-
-   <input type="text"   Placeholder="Enter Location" name="place" required>
-
-   <input type="number" Placeholder="Duration" name="duration" required>
-
-   <input type="number" Placeholder="Inviroment Quality" name="quality" required>
-
-
-   <input type="hidden" name="sport_id" value="<?php echo $sport_id?>" >
-   <!-- <input type="hidden" name="activity_id" value="<php echo $a_id?>" > -->
-
-
-    <button type="submit">Add new Activity</button>
-
-  </div>
-
- </form>
-
 
 </body>
 </html>
