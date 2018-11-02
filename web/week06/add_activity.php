@@ -40,11 +40,16 @@ $stmt->execute();
 // now we need to get the id back from the activity we just created
 
 $db2 = get_db();
+
 $query2 = "SELECT id FROM activities WHERE sport_id=:s_id";
+
 $stmt1 = $db2->perpare($query2);
+
 $stmt1->bindValue(":s_id", $sport_id, PDO::PARAM_INT);
+
 $stmt1->execute();
-$activity_id = $stmt1->fetch();
+
+$row = $stmt1->fetch();
 
 
 
@@ -62,7 +67,7 @@ $activity_id = $stmt1->fetch();
 </head>
 <body>
    <h1>
-      <?php echo $activity
+      <?php echo $row['id'];
       ?>
 
    </h1>
