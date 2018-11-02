@@ -12,7 +12,7 @@ $place    = htmlspecialchars($_POST['place']);
 $duration = htmlspecialchars($_POST['duration']);
 $quality  = htmlspecialchars($_POST['quality']);
 $sport_id = htmlspecialchars($_POST['sport_id']);
-//$activity_id = htmlspecialchars($_POST['activity_id']);
+// $activity_id = htmlspecialchars($_POST['activity_id']);
 
 
 
@@ -38,6 +38,15 @@ $stmt->bindValue(":sport_id", $sport_id, PDO::PARAM_INT);
 $stmt->execute();
 
 // now we need to get the id back from the activity we just created
+
+$db2 = get_db();
+$query2 = "SELECT id FROM activities WHERE sport_id=:s_id;";
+$stmt1 = $db2->perpare($query2);
+$stmt1->bindValue(":s_id", $sport_id, PDO::PARAM_INT);
+$stmt1->execute();
+$activity_id = $stmt1->fetch();
+
+
 
 
 
@@ -68,7 +77,7 @@ $stmt->execute();
 
     <input type="number" Placeholder="Health Level" name="health" required>
 
-    <input type="hidden" name="sport_name" value="<?php echo $activity_id?>" >
+    <input type="hidden" name="activity_id" value="<?php echo $activity_id?>" >
     <input type="hidden" name="sport_id" value="<?php echo $sport_id?>" >
 
 

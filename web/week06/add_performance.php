@@ -37,14 +37,6 @@ $stmt->bindValue(":activity_id",  $activity_id,  PDO::PARAM_INT);
 $stmt->execute();
 
 
-$query2 = "SELECT id FROM activities WHERE sport_id=:s_id;";
-$stmt1 = $db->perpare($query2);
-$stmt1->bindValue(":s_id", $sport_id, PDO::PARAM_INT);
-$stmt1->execute();
-$activity_id = $stmt1->fetch();
-
-
-
 
 
 
