@@ -15,19 +15,19 @@ $db = get_db();
 
 //
 
+ echo $sport_id;
+
+// $query = 'SELECT id FROM activities WHERE sport_id=:s_id';
+
+// $stmt = $db->perpare($query);
+
+// $stmt->bindValue(":s_id", $sport_id, PDO::PARAM_INT);
+// //$stmt1->bindValue(":activity_name", $activity, PDO::PARAM_STR);
 
 
-$query2 = 'SELECT id FROM activities WHERE sport_id=:s_id';
+// $stmt->execute();
 
-$stmt = $db->perpare($query2);
-
-$stmt->bindValue(":s_id", $sport_id, PDO::PARAM_INT);
-//$stmt1->bindValue(":activity_name", $activity, PDO::PARAM_STR);
-
-
-$stmt->execute();
-
-$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 
@@ -61,7 +61,7 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-header("location:activities.php?sport_id=$sport_id");
+//header("location:activities.php?sport_id=$sport_id");
 
 die();
 
