@@ -5,11 +5,11 @@ session_start();
 require('dbConnect.php');
 $db = get_db();
 
- // $name        = htmlspecialchars($_GET['name']);
- // $performance = htmlspecialchars($_GET['performance']);
- // $fun         = htmlspecialchars($_GET['fun']);
- // $health      = htmlspecialchars($_GET['health']);
-//$activity_id = htmlspecialchars($_GET['activity_id']);
+ $name        = htmlspecialchars($_GET['name']);
+ $performance = htmlspecialchars($_GET['performance']);
+ $fun         = htmlspecialchars($_GET['fun']);
+ $health      = htmlspecialchars($_GET['health']);
+$activity_id = htmlspecialchars($_GET['activity_id']);
 
  $sport_id = $_GET['sport_id'];
 
