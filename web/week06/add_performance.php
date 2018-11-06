@@ -20,7 +20,7 @@ $db = get_db();
 
 // $query = 'SELECT * FROM activities WHERE sport_id=:s_id';
 
-$stmt = $db->prepare("SELECT id FROM activities");
+$stmt = $db->prepare("SELECT id FROM activities WHERE sport_id=:s_id;");
 $stmt1 = $db->prepare("SELECT activitie_id FROM performance");
 
 $stmt->bindValue(':s_id', $sport_id);
@@ -37,18 +37,6 @@ $performances = $stmt1->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-
-foreach ($activities as $activity) {
-   //echo $activity;
-   foreach ($performances as $performance ) {
-
-      if ($activity == $performance) {
-         header("location:looptestcrap.php");
-         die();
-      }
-   }
-
-}
 
 
 
@@ -73,6 +61,21 @@ $stmt->bindValue(":activity_id",  33,  PDO::PARAM_INT);
 
 
 $stmt->execute();
+
+
+foreach ($activities as $activity) {
+   //echo $activity;
+   foreach ($performances as $performance ) {
+
+      if ($activity == $performance) {
+         header("location:looptestcrap.php");
+         die();
+      }
+   }
+
+}
+
+
 
 //header("location:activities.php?sport_id=$sport_id");
 
