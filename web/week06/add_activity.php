@@ -52,11 +52,7 @@ $stmt1->bindValue(":activity_name", $activity, PDO::PARAM_STR);
 
 $stmt1->execute();
 
-$row = $stmt1->fetch();
-
-
-
-
+// $row = $stmt1->fetch();
 
 $activity_id = $stmt1->fetch();
 

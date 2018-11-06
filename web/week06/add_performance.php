@@ -62,15 +62,15 @@ $performances = $stmt1->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-foreach ($activities as $activity) {
-   //echo $activity;
-   foreach ($performances as $performance ) {
+// foreach ($activities as $activity) {
+//    //echo $activity;
+foreach ($performances as $performance ) {
 
-      if ($activity == $performance) {
-         header("location:looptestcrap.php");
-         die();
-      }
+   if ($activity_id == $performance) {
+      header("location:looptestcrap.php");
+      die();
    }
+   // }
 
 }
 
