@@ -98,25 +98,25 @@ session_start();
 
       echo "<ul><li><p> Sport activity: $a_name, Date: $a_day, Place: $a_place ActivityID: $a_id</p></li></ul>";
 
-      $stmt1 = $db->prepare('SELECT id, name, performance_level, fun_level, health, activitie_id FROM performance WHERE activitie_id=:activity_id');
-      $stmt1->bindvalue(':activity_id', $a_id);
-      $result = $stmt1->execute();
+      // $stmt1 = $db->prepare('SELECT id, name, performance_level, fun_level, health, activitie_id FROM performance WHERE activitie_id=:activity_id');
+      // $stmt1->bindvalue(':activity_id', $a_id);
+      // $result = $stmt1->execute();
 
-       if ($result) {
+      //  if ($result) {
 
-         $performance = $stmt1->fetch();
+      //    $performance = $stmt1->fetch();
 
-         $pname = $performance['name'];
-         $plevel = $performance['performance_level'];
-         $pflevel = $performance['fun_level'];
-         $pid  = $performance['id'];
-         $perid = $performance['activitie_id'];
+      //    $pname = $performance['name'];
+      //    $plevel = $performance['performance_level'];
+      //    $pflevel = $performance['fun_level'];
+      //    $pid  = $performance['id'];
+      //    $perid = $performance['activitie_id'];
 
 
-         echo "<ul><ul><li><p> Performance LVL($plevel)</p></li></ul></ul>";
-         echo "<ul><ul><li><p>Fun Level($pflevel)</p></li></ul></ul>";
+      //    echo "<ul><ul><li><p> Performance LVL($plevel)</p></li></ul></ul>";
+      //    echo "<ul><ul><li><p>Fun Level($pflevel)</p></li></ul></ul>";
 
-       }
+      //  }
 
    }
 
