@@ -74,7 +74,7 @@ $stmt->bindValue(":activity_id",  33,  PDO::PARAM_INT);
 
 $stmt->execute();
 
-header("location:activities.php?sport_id=$sport_id");
+//header("location:activities.php?sport_id=$sport_id");
 
 die();
 
