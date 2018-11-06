@@ -60,7 +60,7 @@ $stmt->execute();
 $sport_name = $_SESSION['sport_name'];
 
 // $activity_id = $stmt1->fetch();
-header("location:activities.php?sport_id=$sport_id?sport_name=$sport_name");
+header("location:activities.php?sport_id=$sport_id&sport_name=$sport_name");
 die();
 
 ?>
