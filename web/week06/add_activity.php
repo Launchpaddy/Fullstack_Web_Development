@@ -21,7 +21,7 @@ $health = htmlspecialchars($_POST['health']);
 
  $query = "
  INSERT INTO activities (name, day, place, hour_duration, inviroment_quality, sport_id, performance_level, fun_level, health)
- VALUES (:name, :day, :place, :duration, :quality, :sport_id);";
+ VALUES (:name, :day, :place, :duration, :quality, :sport_id, :performance_level, :fun_level, :health);";
 
 //  $query2 = "INSERT INTO activities (name, sport_id) VALUES (:name, :id);"
 
