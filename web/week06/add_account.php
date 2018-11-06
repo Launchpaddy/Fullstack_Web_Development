@@ -41,7 +41,7 @@ VALUES (:username, :password, :displayName);";
 // prepare the statement
 $stmt = $db->prepare($query);
 
-// be do some more checking to make sure nobody has put
+// do some more checking to make sure nobody has put
 // icky things in our query
 $stmt->bindValue(":username",    $username, PDO::PARAM_STR);
 $stmt->bindValue(":password",    $hashedPassword, PDO::PARAM_STR);

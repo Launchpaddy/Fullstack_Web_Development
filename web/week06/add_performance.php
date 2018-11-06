@@ -1,3 +1,11 @@
+
+<!--
+NOTICE: I AM NO LONGER USING THIS PAGE
+
+I droped my performance table because it was set up as a one to many but i wanted it
+to be a one to one realation ship
+so i moved the date in perfomance and added it to the activiy table.
+ -->
 <?php
 
 session_start();

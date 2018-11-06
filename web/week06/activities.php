@@ -43,6 +43,7 @@ session_start();
 
   <a href='homepage.php'>Return to Home</a>
 
+<!-- This Form is the meat of this project -->
  <form action="add_activity.php" method="POST">
     <div class="container">
 
@@ -83,6 +84,7 @@ session_start();
 
  </form>
 
+<!-- Display the users activties in a nice looking table -->
 <table>
   <tr>
     <th>Name</th>
