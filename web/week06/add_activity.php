@@ -19,7 +19,7 @@ $health =            htmlspecialchars($_POST['health']);
 
 
 
- $query = 'INSERT INTO activities (name, day, place, hour_duration, inviroment_quality, sport_id, performance_level, fun_level, health) VALUES (:name, :day, :place, :duration, :quality, :sport_id, $performance_level, $fun_level, $health);';
+ $query = "INSERT INTO activities (name, day, place, hour_duration, inviroment_quality, sport_id, performance_level, fun_level, health) VALUES (:name, :day, :place, :duration, :quality, :sport_id, :performance, :fun, :health);";
 
 //  $query2 = "INSERT INTO activities (name, sport_id) VALUES (:name, :id);"
 
@@ -33,10 +33,10 @@ $stmt->bindValue(':place',             $place,    PDO::PARAM_STR);
 $stmt->bindValue(':duration',          $duration, PDO::PARAM_INT);
 $stmt->bindValue(':quality',           $quality,  PDO::PARAM_INT);
 $stmt->bindValue(':sport_id',          $sport_id, PDO::PARAM_INT);
-// $stmt->bindValue(':performance', $performance_level, PDO::PARAM_INT);
-// $stmt->bindValue(':fun',         $fun_level,         PDO::PARAM_INT);
-// $stmt->bindValue(':health',            $health,      PDO::PARAM_INT);
-// //  echo "$id";
+$stmt->bindValue(':performance', $performance_level, PDO::PARAM_INT);
+$stmt->bindValue(':fun',         $fun_level,         PDO::PARAM_INT);
+$stmt->bindValue(':health',            $health,      PDO::PARAM_INT);
+//  echo "$id";
 
 
 $stmt->execute();
