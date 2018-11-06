@@ -91,6 +91,7 @@ a:link, a:visited {
     color: white;
     padding: 14px 25px;
     text-align: center;
+    align-self: center;
     text-decoration: none;
     display: inline-block;
 }
