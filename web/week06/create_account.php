@@ -5,7 +5,7 @@
    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <h2>Creat New PERFORM Account</h2>
+   <h1>Creat New PERFORM Account</h1>
    <form action="add_account.php" method="POST">
 
       <div class="container">
