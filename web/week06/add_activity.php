@@ -4,28 +4,29 @@ session_start();
 
 require('dbConnect.php');
 $db = get_db();
+$sport_name = $_SESSION['sport_name'];
 
 
-$activity =          $_POST['activity'];
-$date     =          $_POST['date'];
-$place    =          $_POST['place'];
-$duration =          $_POST['duration'];
-$quality  =          $_POST['quality'];
-$sport_id =          $_POST['sport_id'];
-$performance_level = $_POST['performance'];
-$fun_level =         $_POST['fun'];
-$health =            $_POST['health'];
+$activity =          htmlspecialchars($_POST['activity']);
+$date     =          htmlspecialchars($_POST['date']);
+$place    =          htmlspecialchars($_POST['place']);
+$duration =          htmlspecialchars($_POST['duration']);
+$quality  =          htmlspecialchars($_POST['quality']);
+$sport_id =          htmlspecialchars($_POST['sport_id']);
+$performance_level = htmlspecialchars($_POST['performance']);
+$fun_level =         htmlspecialchars($_POST['fun']);
+$health =            htmlspecialchars($_POST['health']);
 // $activity_id = htmlspecialchars($_POST['activity_id']);
 
 
 
- // $query = "INSERT INTO activities (name, day, place, hour_duration, inviroment_quality, sport_id, performance_level, fun_level, health) VALUES (:name, :day, :place, :duration, :quality, :sport_id, :performance, :fun, :health);";
+ $query = "INSERT INTO activities (name, day, place, hour_duration, inviroment_quality, sport_id, performance_level, fun_level, health) VALUES (:name, :day, :place, :duration, :quality, :sport_id, :performance, :fun, :health);";
 
 //  $query2 = "INSERT INTO activities (name, sport_id) VALUES (:name, :id);"
 
 
 
-$stmt = $db->prepare('INSERT INTO activities (name, day, place, hour_duration, inviroment_quality, sport_id, performance_level, fun_level, health) VALUES (:name, :day, :place, :duration, :quality, :sport_id, :performance, :fun, :health);');
+$stmt = $db->prepare($query);
 
 $stmt->bindValue(':name',              $activity, PDO::PARAM_STR);
 $stmt->bindValue(':day',               $date,     PDO::PARAM_STR);
@@ -57,7 +58,7 @@ $stmt->execute();
 // $stmt1->execute();
 
 // // $row = $stmt1->fetch();
-$sport_name = $_SESSION['sport_name'];
+
 
 // $activity_id = $stmt1->fetch();
 header("location:activities.php?sport_id=$sport_id&sport_name=$sport_name");
