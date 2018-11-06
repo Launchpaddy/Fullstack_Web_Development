@@ -95,3 +95,8 @@ a:link, a:visited {
 a:hover, a:active {
     background-color: #1231A3;
 }
+
+h1 {
+    background-color: #79E5EE;
+    text-align: center;
+}
