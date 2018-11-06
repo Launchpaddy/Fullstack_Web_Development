@@ -99,7 +99,6 @@ session_start();
   </tr>
 
 <?php
-  echo "<table>";
 
    foreach (array_reverse($activities)  as $activity) {
       $name     = $activity['name'];
