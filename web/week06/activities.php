@@ -42,6 +42,7 @@ session_start();
   <h1><?php  echo $sport_name?>'s Activities</h1>
 
   <a href='homepage.php'>Return to Home</a>
+  <br>
 
 <!-- This Form is the meat of this project -->
  <form action="add_activity.php" method="POST">
@@ -83,6 +84,7 @@ session_start();
   </div>
 
  </form>
+ <br>
 
 <!-- Display the users activties in a nice looking table -->
 <table>
