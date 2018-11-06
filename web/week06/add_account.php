@@ -26,14 +26,12 @@ $_SESSION['displayName'] = $displayName;
 // Ideally we don't want to set our session until we have checked this
 // but I'm not so sure php wont just do it anyways no mater what the order of
 // our code is. ether way we can reset the session correctly later.
-// if (!isset($username) || $username == "" || !isset($password) || $password == "")
-// {
-//    header("Location: login.php");
-//    die(); // we always include a die after redirects.
-// }
+if (!isset($username) || $username == "" || !isset($password) || $password == "")
+{
+   header("Location: login.php");
+   die(); // we always include a die after redirects.
+}
 
-// not sure if i will be using this yet
-//$_SESSION['logedIn'] = true;
 
 // How we insert into our user table
 $query = "INSERT INTO users(username, password, display_name)
