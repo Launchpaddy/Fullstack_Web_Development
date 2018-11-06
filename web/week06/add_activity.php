@@ -37,13 +37,13 @@ $stmt->bindValue(":quality",  $quality,  PDO::PARAM_INT);
 $stmt->bindValue(":sport_id", $sport_id, PDO::PARAM_INT);
 $stmt->bindValue(":performance_level", $performance_level, PDO::PARAM_INT);
 $stmt->bindValue(":fun_level", $fun_level, PDO::PARAM_INT);
-$stmt->bindValue(":health", $health, PDO::PARAM_INT);
+$stmt->bindValue(":health",    $health, PDO::PARAM_INT);
 //  echo "$id";
 
 
 $stmt->execute();
 
-echo $sport_id;
+// echo $sport_id;
 
 // now we need to get the id back from the activity we just created
 
