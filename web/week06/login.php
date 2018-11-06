@@ -62,7 +62,7 @@ if (isset($_POST['txtUsername']) && isset($_POST['txtPassword'])) {
 <body>
 
 
-<h2>Login to PERFORM</h2>
+<h1>Login to PERFORM</h1>
 
 <form action="login.php" method="POST">
 
