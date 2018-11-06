@@ -25,7 +25,7 @@ $stmt->bindValue(":s_id", $sport_id, PDO::PARAM_INT);
 //$stmt1->bindValue(":activity_name", $activity, PDO::PARAM_STR);
 
 
-$stmt->execute();
+//$stmt->execute();
 
 //$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
