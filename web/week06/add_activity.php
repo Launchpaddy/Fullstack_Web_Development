@@ -43,11 +43,13 @@ echo $sport_id;
 
 // $db2 = get_db();
 
-// $query2 = "SELECT id FROM activities WHERE sport_id=:s_id";
+// $query2 = "SELECT id FROM activities WHERE sport_id=:s_id AND name=:activity_name";
 
 // $stmt1 = $db2->perpare($query2);
 
 // $stmt1->bindValue(":s_id", $sport_id, PDO::PARAM_INT);
+// $stmt1->bindValue(":activity_name", $activity, PDO::PARAM_STR);
+
 
 // $stmt1->execute();
 
@@ -69,8 +71,7 @@ echo $sport_id;
 </head>
 <body>
    <h1>
-      <?php echo $row['id'];
-      ?>
+
 
    </h1>
 <form action="add_performance.php" method="GET">
@@ -84,7 +85,7 @@ echo $sport_id;
 
     <input type="number" Placeholder="Health Level" name="health" required>
 
-    <input type="hidden" name="activity_id" value="<?php echo $activity_id?>" >
+    <!-- <input type="hidden" name="activity_id" value="<php echo $activity_id?>" > -->
     <input type="hidden" name="sport_id" value="<?php echo $sport_id?>" >
 
 

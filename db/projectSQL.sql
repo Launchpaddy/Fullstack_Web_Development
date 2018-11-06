@@ -31,7 +31,7 @@ CREATE TABLE activities
 
 
 INSERT INTO activities (name, day, place, sport_id)
-VALUES ('Serving', '10/19/2018', 'Icenter', '11'), ('passing', '10/5/2018', 'Hart', '11');
+VALUES ('Serving', '10/19/2018', 'Icenter' '11'), ('passing', '10/5/2018', 'Hart', '11');
 
 INSERT INTO activities (name, day, place, sport_id)
 VALUES ('Passing', '10/1/2018', 'Upper Field', '13'), ('Corner Kicks', '10/7/2018', 'park', '13');
