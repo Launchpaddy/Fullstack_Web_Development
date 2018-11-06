@@ -21,7 +21,7 @@ $db = get_db();
 // $query = 'SELECT * FROM activities WHERE sport_id=:s_id';
 
 $stmt = $db->prepare("SELECT id FROM activities WHERE sport_id=:s_id;");
-$stmt1 = $db->prepare("SELECT id FROM performance");
+$stmt1 = $db->prepare("SELECT activitie_id FROM performance");
 
 $stmt->bindValue(':s_id', $sport_id);
 // $stmt1->bindValue(":activity_name", $activity, PDO::PARAM_STR);
