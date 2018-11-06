@@ -26,6 +26,9 @@ CREATE TABLE activities
    , hour_duration SMALLINT
    , inviroment_quality SMALLINT
    , sport_id INT NOT NULL REFERENCES sports(id)
+   , performance_level SMALLINT
+   , fun_level SMALLINT
+   , health SMALLINT
 
 );
 
