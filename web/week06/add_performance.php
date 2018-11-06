@@ -13,14 +13,13 @@ $db = get_db();
 
  $sport_id = $_GET['sport_id'];
 
-$db2 = get_db();
-
+//
 
 
 
 $query2 = "SELECT id FROM activities WHERE sport_id=:s_id";
 
-$stmt1 = $db2->perpare($query2);
+$stmt1 = $db->perpare($query2);
 
 $stmt1->bindValue(":s_id", $sport_id, PDO::PARAM_INT);
 //$stmt1->bindValue(":activity_name", $activity, PDO::PARAM_STR);
