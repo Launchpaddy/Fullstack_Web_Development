@@ -72,8 +72,8 @@ session_start();
 
    <input type="number" Placeholder="Inviroment Quality" name="quality" required>
 
-   <input type="number" Placeholder="Performance Level"  name="performance_level" required>
-   <input type="number" Placeholder="Fun Level"          name="fun_level" required>
+   <input type="number" Placeholder="Performance Level"  name="performance" required>
+   <input type="number" Placeholder="Fun Level"          name="fun" required>
    <input type="number" Placeholder="Health Level"       name="health" required>
    <!-- <input type="hidden" name="activity_id" value="<php echo $a_id?>" > -->
 
