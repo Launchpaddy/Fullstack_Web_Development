@@ -32,7 +32,7 @@ $stmt->bindValue(':day',               $date,     PDO::PARAM_STR);
 $stmt->bindValue(':place',             $place,    PDO::PARAM_STR);
 $stmt->bindValue(':duration',          $duration, PDO::PARAM_INT);
 $stmt->bindValue(':quality',           $quality,  PDO::PARAM_INT);
-// $stmt->bindValue(':sport_id',          $sport_id, PDO::PARAM_INT);
+$stmt->bindValue(':sport_id',          $sport_id, PDO::PARAM_INT);
 // $stmt->bindValue(':performance', $performance_level, PDO::PARAM_INT);
 // $stmt->bindValue(':fun',         $fun_level,         PDO::PARAM_INT);
 // $stmt->bindValue(':health',            $health,      PDO::PARAM_INT);
