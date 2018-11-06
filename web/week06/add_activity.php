@@ -25,7 +25,7 @@ $health =            htmlspecialchars($_POST['health']);
 
 
 
-// $stmt = $db->prepare($query);
+$stmt = $db->prepare($query);
 
 $stmt->bindValue(":name",              $activity, PDO::PARAM_STR);
 $stmt->bindValue(":day",               $date,     PDO::PARAM_STR);
