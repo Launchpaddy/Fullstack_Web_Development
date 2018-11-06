@@ -6,6 +6,7 @@ session_start();
 
    $sport_id   = $_GET['sport_id'];
    $sport_name = $_GET['sport_name'];
+   $_SESSION['sport_name'] = $sport_name;
 
    if (isset($_SESSION['logedIn'])) {
       $username = $_SESSION['username'];
