@@ -59,6 +59,7 @@ session_start();
    <input type="number" Placeholder="Inviroment Quality" name="quality" required>
 
    <!-- <input type="number" Placeholder="Performance Level"  name="performance" required> -->
+   <p>Performance Level 1-100</p>
    <input type="range" min="1" max="100" Placeholder="Performance Level" value="50" class="slider" name="performance">
 
 
