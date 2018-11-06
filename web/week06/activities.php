@@ -98,15 +98,6 @@ session_start();
     <th>Health Level</th>
   </tr>
 
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-
 <?php
   echo "<table>";
 
@@ -121,7 +112,7 @@ session_start();
       $health = $activity['health'];
       // if the activiy is realated to the right sport for the user
 
-      echo "
+      echo "<tr>
       <td>$name</td>
       <td>$day</td>
       <td>$place</td>
@@ -129,7 +120,7 @@ session_start();
       <td>$quality</td>
       <td>$performance</td>
       <td>$fun</td>
-      <td>$health</td>";
+      <td>$health</td> </tr>";
 
    }
 ?>
