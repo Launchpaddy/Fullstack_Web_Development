@@ -61,7 +61,7 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-//header("location:activities.php?sport_id=$sport_id");
+header("location:activities.php?sport_id=$sport_id");
 
 die();
 
