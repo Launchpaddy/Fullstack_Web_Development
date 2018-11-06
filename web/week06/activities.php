@@ -57,7 +57,7 @@ session_start();
   <a href='homepage.php'>Return to Home</a>
 
 
- <form action="add_activity.php" method="POST">
+ <form action="add_activity.php" method="GET">
     <div class="container">
 
     <label for="activity"><b>Activity</b></label>
