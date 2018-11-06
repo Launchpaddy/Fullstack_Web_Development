@@ -40,8 +40,6 @@ $query = "INSERT INTO users(username, password, display_name)
 VALUES (:username, :password, :displayName);";
 
 
-
-
 // prepare the statement
 $stmt = $db->prepare($query);
 
@@ -56,6 +54,6 @@ $stmt->execute();
 
 // Redirect to the login page
 header('location:login.php');
-//die();
+die();
 
 ?>
