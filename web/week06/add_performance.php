@@ -19,7 +19,7 @@ $db = get_db();
 
 // $query = 'SELECT * FROM activities WHERE sport_id=:s_id';
 
-$stmt = $db->perpare('SELECT * FROM activities WHERE sport_id=$sport_id');
+$stmt = $db->perpare('SELECT * FROM activities WHERE sport_id=$sport_id;');
 
 //$stmt->bindValue(':s_id', $sport_id);
 //$stmt1->bindValue(":activity_name", $activity, PDO::PARAM_STR);
