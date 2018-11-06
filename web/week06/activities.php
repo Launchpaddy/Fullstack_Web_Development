@@ -54,30 +54,27 @@ session_start();
 
    <input type="text"   Placeholder="Enter Location"     name="place" required>
 
-   <!-- <input type="number" Placeholder="Duration"           name="duration" required> -->
+
    <p>Duration Hours 1-10:
     <input type="range" min="1" max="10" value="1" class="slider" name="duration">
    </p>
 
-   <!-- <input type="number" Placeholder="Inviroment Quality" name="quality" required> -->
    <p>Inviroment Quality 1-100:
     <input type="range" min="1" max="100" value="50" class="slider" name="quality">
    </p>
 
-   <!-- <input type="number" Placeholder="Performance Level"  name="performance" required> -->
    <p>Performance Level 1-100:
     <input type="range" min="1" max="100" value="50" class="slider" name="performance">
    </p>
 
-   <!-- <input type="number" Placeholder="Fun Level"          name="fun"         required> -->
-    <p>Fun Range 1-100:
+  <p>Fun Range 1-100:
     <input type="range" min="1" max="100" value="50" class="slider" name="fun">
    </p>
 
-   <!-- <input type="number" Placeholder="Health Level"       name="health"    required> -->
     <p>Health Range 1-100:
     <input type="range" min="1" max="100" value="50" class="slider" name="health">
    </p>
+
    <input type="hidden" name="sport_id" value="<?php echo $sport_id?>" >
 
    <button type="submit">Add new Activity</button>
@@ -109,7 +106,7 @@ session_start();
       $performance = $activity['performance_level'];
       $fun = $activity['fun_level'];
       $health = $activity['health'];
-      // if the activiy is realated to the right sport for the user
+
 
       echo "<tr>
       <td>$name</td>
