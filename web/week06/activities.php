@@ -91,7 +91,7 @@ session_start();
     <th>Name</th>
     <th>Date</th>
     <th>Location</th>
-    <th>Duration</th>
+    <th>Hours</th>
     <th>Inviroment Qualtiy</th>
     <th>Performance Level</th>
     <th>Fun Level</th>
