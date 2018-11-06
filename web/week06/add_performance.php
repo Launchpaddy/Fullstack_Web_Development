@@ -39,7 +39,7 @@ $performances = $stmt1->fetchAll(PDO::FETCH_ASSOC);
 
 
 foreach ($activities as $activity) {
-   echo $activity['id'];
+   echo $activity;
    foreach ($performances as $performance ) {
 
       if ($activity['id'] == $performance['activitie_id']) {
