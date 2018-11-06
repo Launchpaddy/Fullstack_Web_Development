@@ -20,8 +20,8 @@ $db = get_db();
 
 // $query = 'SELECT * FROM activities WHERE sport_id=:s_id';
 
-$stmt = $db->prepare("SELECT id  ida FROM activities WHERE sport_id=:s_id;");
-$stmt1 = $db->prepare("SELECT id  idp FROM performance");
+$stmt = $db->prepare("SELECT id FROM activities WHERE sport_id=:s_id;");
+$stmt1 = $db->prepare("SELECT id FROM performance");
 
 $stmt->bindValue(':s_id', $sport_id);
 // $stmt1->bindValue(":activity_name", $activity, PDO::PARAM_STR);
@@ -41,7 +41,7 @@ $performances = $stmt1->fetchAll(PDO::FETCH_ASSOC);
 foreach ($activities as $activity) {
    foreach ($performances as $perfomance ) {
 
-      if ($activity['ida'] == $performance['idp']) {
+      if ($activity['id'] == $performance['id']) {
          header("location:looptestcrap.php");
          die();
       }
