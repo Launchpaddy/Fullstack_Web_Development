@@ -12,9 +12,9 @@ $place    = htmlspecialchars($_POST['place']);
 $duration = htmlspecialchars($_POST['duration']);
 $quality  = htmlspecialchars($_POST['quality']);
 $sport_id = htmlspecialchars($_POST['sport_id']);
-$performance_level = htmlspecialchars($_POST['performance']);
-$fun_level =         htmlspecialchars($_POST['fun']);
-$health =            htmlspecialchars($_POST['health']);
+$performance_level = $_POST['performance'];
+$fun_level =         $_POST['fun'];
+$health =            $_POST['health'];
 // $activity_id = htmlspecialchars($_POST['activity_id']);
 
 
