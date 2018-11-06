@@ -87,18 +87,49 @@ session_start();
  </form>
 
 <table>
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Location</th>
+    <th>Duration</th>
+    <th>Inviroment Qualtiy</th>
+    <th>Performance Level</th>
+    <th>Fun Level</th>
+    <th>Health Level</th>
+  </tr>
+
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+
 <?php
   echo "<table>";
 
    foreach (array_reverse($activities)  as $activity) {
-      $a_name = $activity['name'];
-      $a_day = $activity['day'];
-      $a_id  = $activity['id'];
-
-      $a_place = $activity['place'];
+      $name     = $activity['name'];
+      $day      = $activity['day'];
+      $place = $activity['place'];
+      $duration = $activity['duration'];
+      $quality = $activity['quality'];
+      $performance = $activity['performance'];
+      $fun = $activity['fun'];
+      $health = $activity['health'];
       // if the activiy is realated to the right sport for the user
 
-      echo "<tr><th><p> Sport activity: $a_name, Date: $a_day, Place: $a_place ActivityID: $a_id</p></th></tr>";
+      echo "
+      <td>$name</td>
+      <td>$day</td>
+      <td>$place</td>
+      <td>$duration</td>
+      <td>$quality</td>
+      <td>$performance</td>
+      <td>$fun</td>
+      <td>$health</td>";
 
    }
 ?>
