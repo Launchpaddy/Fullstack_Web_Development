@@ -21,7 +21,7 @@ session_start();
    }
 
    // // activites table
-   $stmt = $db->prepare('SELECT id, name, day, place, hour_duration, inviroment_quality, perfomance_level, fun_level, health FROM activities WHERE sport_id=:sport_id' );
+   $stmt = $db->prepare('SELECT id, name, day, place, hour_duration, inviroment_quality, performance_level, fun_level, health FROM activities WHERE sport_id=:sport_id' );
    $stmt->bindvalue(':sport_id', $sport_id);
 
    $stmt->execute();
