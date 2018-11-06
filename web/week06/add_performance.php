@@ -11,7 +11,7 @@ $db = get_db();
  $health      = htmlspecialchars($_GET['health']);
 //$activity_id = htmlspecialchars($_GET['activity_id']);
 
-//// $sport_id = $_GET['sport_id'];
+ $sport_id = $_GET['sport_id'];
 
 
 
