@@ -17,7 +17,7 @@ $db = get_db();
 
  //echo $sport_id;
 
-$query = 'SELECT id FROM activities WHERE sport_id=:s_id';
+$query = 'SELECT * FROM activities WHERE sport_id=:s_id';
 
 $stmt = $db->perpare($query);
 
