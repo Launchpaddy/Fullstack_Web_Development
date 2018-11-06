@@ -59,7 +59,7 @@ session_start();
    <input type="number" Placeholder="Inviroment Quality" name="quality" required>
 
    <!-- <input type="number" Placeholder="Performance Level"  name="performance" required> -->
-   <input type="range" min="1" max="100" value="50" class="slider" name="performance">
+   <input type="range" min="1" max="100" Placeholder="Performance Level" value="50" class="slider" name="performance">
 
 
    <input type="number" Placeholder="Fun Level"          name="fun"         required>
@@ -71,18 +71,6 @@ session_start();
   </div>
 
  </form>
- <p>Value: <span id="demo"></span></p>
-   <script type="text/javascript">
-       var slider = document.getElementByName("performance");
-      var output = document.getElementById("demo");
-        output.innerHTML = slider.value; // Display the default slider value
-
-// Update the current slider value (each time you drag the slider handle)
-    slider.oninput = function() {
-        output.innerHTML = this.value;
-}
-
-   </script>
 
 <?php
 
