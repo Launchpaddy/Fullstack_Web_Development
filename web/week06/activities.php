@@ -74,7 +74,7 @@ session_start();
    <input type="number" Placeholder="Performance Level"  name="performance" required>
    <input type="number" Placeholder="Fun Level"          name="fun"         required>
    <input type="number" Placeholder="Health Level"       name="health"    required>
-   <!-- <input type="hidden" name="activity_id" value="<php echo $a_id?>" > -->
+   <input type="hidden" name="sport_id" value="<php echo $sport_id?>" >
 
    <button type="submit">Add new Activity</button>
 
