@@ -43,6 +43,7 @@ foreach ($activities as $activity) {
 
       if ($activity['ida'] == $performances['idp']) {
          header("location:looptestcrap.php");
+         die();
       }
    }
 
