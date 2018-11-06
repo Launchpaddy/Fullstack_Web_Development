@@ -60,6 +60,19 @@ session_start();
 
    <!-- <input type="number" Placeholder="Performance Level"  name="performance" required> -->
    <input type="range" min="1" max="100" value="50" class="slider" name="performance">
+   <p>Value: <span id="demo"></span></p>
+   <script type="text/javascript">
+       var slider = document.getElementByName("performance");
+      var output = document.getElementById("demo");
+        output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+    slider.oninput = function() {
+        output.innerHTML = this.value;
+}
+
+   </script>
+
    <input type="number" Placeholder="Fun Level"          name="fun"         required>
    <input type="number" Placeholder="Health Level"       name="health"    required>
    <input type="hidden" name="sport_id" value="<?php echo $sport_id?>" >
