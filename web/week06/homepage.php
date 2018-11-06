@@ -45,6 +45,7 @@
 
   <h1><?php echo $display_name; ?>'s PERFORM Home Page</h1>
   <h2>Sports</h2>
+  <a href="logOut.php">Log Out</a>
   <form action="add_sport.php" method="POST">
     <div class="container">
 
