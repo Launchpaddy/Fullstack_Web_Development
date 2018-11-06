@@ -58,7 +58,8 @@ session_start();
 
    <input type="number" Placeholder="Inviroment Quality" name="quality" required>
 
-   <input type="number" Placeholder="Performance Level"  name="performance" required>
+   <!-- <input type="number" Placeholder="Performance Level"  name="performance" required> -->
+   <input type="range" min="1" max="100" value="50" class="slider" name="performance">
    <input type="number" Placeholder="Fun Level"          name="fun"         required>
    <input type="number" Placeholder="Health Level"       name="health"    required>
    <input type="hidden" name="sport_id" value="<?php echo $sport_id?>" >
