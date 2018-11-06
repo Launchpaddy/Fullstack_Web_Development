@@ -71,7 +71,7 @@ session_start();
 
 <?php
 
-   foreach ($activities  as $activity) {
+   foreach (array_reverse($activities)  as $activity) {
       $a_name = $activity['name'];
       $a_day = $activity['day'];
       $a_id  = $activity['id'];

@@ -63,7 +63,7 @@
 <?php
 
   echo "<ul>";
-   foreach ($sports as $sport) {
+   foreach (array_reverse($sports) as $sport) {
        $sport_name = $sport['name'];
        $sport_id = $sport['id'];
        echo "<li><a href=\"activities.php?sport_id=$sport_id&sport_name=$sport_name\">$sport_name</a></li>";
