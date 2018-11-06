@@ -6,12 +6,12 @@ require('dbConnect.php');
 $db = get_db();
 
 
-$activity = htmlspecialchars($_POST['activity']);
-$date     = htmlspecialchars($_POST['date']);
-$place    = htmlspecialchars($_POST['place']);
-$duration = htmlspecialchars($_POST['duration']);
-$quality  = htmlspecialchars($_POST['quality']);
-$sport_id = htmlspecialchars($_POST['sport_id']);
+$activity =          $_POST['activity'];
+$date     =          $_POST['date'];
+$place    =          $_POST['place'];
+$duration =          $_POST['duration'];
+$quality  =          $_POST['quality'];
+$sport_id =          $_POST['sport_id'];
 $performance_level = $_POST['performance'];
 $fun_level =         $_POST['fun'];
 $health =            $_POST['health'];
