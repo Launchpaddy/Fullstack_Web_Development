@@ -13,8 +13,8 @@ $duration = htmlspecialchars($_POST['duration']);
 $quality  = htmlspecialchars($_POST['quality']);
 $sport_id = htmlspecialchars($_POST['sport_id']);
 $performance_level = htmlspecialchars($_POST['performance_level']);
-$fun_level = htmlspecialchars($_POST['fun_level']);
-$health = htmlspecialchars($_POST['health']);
+$fun_level =         htmlspecialchars($_POST['fun_level']);
+$health =            htmlspecialchars($_POST['health']);
 // $activity_id = htmlspecialchars($_POST['activity_id']);
 
 

@@ -57,24 +57,24 @@ session_start();
   <a href='homepage.php'>Return to Home</a>
 
 
- <form action="add_activity.php" method="GET">
+ <form action="add_activity.php" method="POST">
     <div class="container">
 
     <label for="activity"><b>Activity</b></label>
 
-   <input type="text"   placeholder="Enter Activity" name="activity" required>
+   <input type="text"   placeholder="Enter Activity"     name="activity" required>
 
-   <input type="date"   placeholder="Enter Date" name="date" required>
+   <input type="date"   placeholder="Enter Date"         name="date" required>
 
-   <input type="text"   Placeholder="Enter Location" name="place" required>
+   <input type="text"   Placeholder="Enter Location"     name="place" required>
 
-   <input type="number" Placeholder="Duration" name="duration" required>
+   <input type="number" Placeholder="Duration"           name="duration" required>
 
    <input type="number" Placeholder="Inviroment Quality" name="quality" required>
 
-   <input type="number" Placeholder="Performance Level" name="performance_level" required>
-   <input type="number" Placeholder="Fun Level" name="fun_level" required>
-   <input type="number" Placeholder="Health Level" name="health" required>
+   <input type="number" Placeholder="Performance Level"  name="performance_level" required>
+   <input type="number" Placeholder="Fun Level"          name="fun_level" required>
+   <input type="number" Placeholder="Health Level"       name="health" required>
    <!-- <input type="hidden" name="activity_id" value="<php echo $a_id?>" > -->
 
    <button type="submit">Add new Activity</button>
