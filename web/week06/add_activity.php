@@ -61,6 +61,8 @@ $stmt->execute();
 // // $row = $stmt1->fetch();
 
 // $activity_id = $stmt1->fetch();
+header('location:activities.php');
+die();
 
 ?>
 
