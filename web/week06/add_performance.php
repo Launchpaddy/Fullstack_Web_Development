@@ -15,7 +15,7 @@ $db = get_db();
 
 //
 
- echo $sport_id;
+ //echo $sport_id;
 
 $query = 'SELECT id FROM activities WHERE sport_id=:s_id';
 
