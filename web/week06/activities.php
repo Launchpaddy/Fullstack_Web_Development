@@ -46,7 +46,7 @@ session_start();
  <form action="add_activity.php" method="POST">
     <div class="container">
 
-    <label for="activity"><b>Activity</b></label>
+    <label for="activity"><b>Add Activity</b></label>
 
    <input type="text"   placeholder="Enter Activity"     name="activity" required>
 
