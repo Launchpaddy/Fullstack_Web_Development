@@ -19,15 +19,15 @@ $activity_id = htmlspecialchars($_GET['activity_id']);
 
 // $query = 'SELECT * FROM activities WHERE sport_id=:s_id';
 
-// $stmt = $db->perpare("SELECT * FROM activities");
+$stmt = $db->prepare("SELECT * FROM activities WHERE sport_id=:s_id;");
 
-// $stmt->bindValue(':s_id', $sport_id);
-// //$stmt1->bindValue(":activity_name", $activity, PDO::PARAM_STR);
+$stmt->bindValue(':s_id', $sport_id);
+// $stmt1->bindValue(":activity_name", $activity, PDO::PARAM_STR);
 
 
-// $stmt->execute();
+$stmt->execute();
 
-// $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 
