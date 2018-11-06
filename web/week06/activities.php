@@ -21,7 +21,7 @@ session_start();
    }
 
    // // activites table
-   $stmt = $db->prepare('SELECT id, name, day, place, hour_duration, inviroment_quality FROM activities WHERE sport_id=:sport_id' );
+   $stmt = $db->prepare('SELECT id, name, day, place, hour_duration, inviroment_quality, perfomance_level, fun_level, health FROM activities WHERE sport_id=:sport_id' );
    $stmt->bindvalue(':sport_id', $sport_id);
 
    $stmt->execute();
@@ -105,10 +105,10 @@ session_start();
       $name     = $activity['name'];
       $day      = $activity['day'];
       $place = $activity['place'];
-      $duration = $activity['duration'];
-      $quality = $activity['quality'];
-      $performance = $activity['performance'];
-      $fun = $activity['fun'];
+      $duration = $activity['hour_duration'];
+      $quality = $activity['inviroment_quality'];
+      $performance = $activity['performance_level'];
+      $fun = $activity['fun_level'];
       $health = $activity['health'];
       // if the activiy is realated to the right sport for the user
 
