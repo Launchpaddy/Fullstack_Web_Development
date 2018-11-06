@@ -21,7 +21,7 @@ $query = 'SELECT id FROM activities WHERE sport_id=:s_id';
 
 $stmt = $db->perpare($query);
 
-$stmt->bindValue(":s_id", $sport_id, PDO::PARAM_INT);
+$stmt->bindValue(':s_id', $sport_id, PDO::PARAM_INT);
 //$stmt1->bindValue(":activity_name", $activity, PDO::PARAM_STR);
 
 
