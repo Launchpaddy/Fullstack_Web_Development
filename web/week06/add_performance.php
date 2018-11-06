@@ -64,7 +64,7 @@ $stmt->execute();
 
 
 foreach ($activity_id as $activity) {
-   //echo $activity;
+   echo $activity;
    foreach ($performances as $performance ) {
 
       if ($activity == $performance) {
