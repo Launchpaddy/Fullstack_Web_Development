@@ -55,7 +55,7 @@ $activity_id = htmlspecialchars($_GET['activity_id']);
 
 // $stmt->execute();
 
-header("location:activities.php");
+header("location:activities.php?sport_id=$sport_id");
 
 die();
 
