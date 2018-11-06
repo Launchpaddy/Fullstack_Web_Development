@@ -9,7 +9,8 @@ $db = get_db();
  $performance = htmlspecialchars($_GET['performance']);
  $fun         = htmlspecialchars($_GET['fun']);
  $health      = htmlspecialchars($_GET['health']);
-$activity_id = htmlspecialchars($_GET['activity_id']);
+// $activity_id = htmlspecialchars($_GET['activity_id']);
+
 
  $sport_id = $_GET['sport_id'];
 
@@ -19,17 +20,30 @@ $activity_id = htmlspecialchars($_GET['activity_id']);
 
 // $query = 'SELECT * FROM activities WHERE sport_id=:s_id';
 
-$stmt = $db->prepare("SELECT * FROM activities WHERE sport_id=:s_id;");
+$stmt = $db->prepare("SELECT id  ida FROM activities WHERE sport_id=:s_id;");
+$stmt1 = $db->prepare("SELECT id  idp FROM performance");
 
 $stmt->bindValue(':s_id', $sport_id);
 // $stmt1->bindValue(":activity_name", $activity, PDO::PARAM_STR);
 
 
 $stmt->execute();
+$stmt1->execute();
 
-$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$activties = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$performances = $stmt1->fetchAll(PDO::FETCH_ASSOC);
 
 
+
+
+
+
+$i = 0;
+foreach ($activities as $activity) {
+   if ($activity['ida'] == $performances[$i + 1]['idp']) {
+      header("location:looptestcrap.php");
+   }
+}
 
 
 
