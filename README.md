@@ -1,1 +1,1 @@
-CS 313 PHP Base Code
+For this project I created a dynamic website that you could customize to keep track of your perfomance in your sports. This would be used for athletes who are wanting to improve in their performance. 
